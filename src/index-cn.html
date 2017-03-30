@@ -1,0 +1,185 @@
+﻿<?php
+$title = "PPSSPP";
+$pagelang = 'cn';
+$navsel = "index-cn.html";
+
+include("downloads-util.php");
+$versions = get_version_links("ppsspp_win.zip");
+$current_version = $versions[0]["version"];
+
+include("header.php");
+?>
+
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://static.ak.facebook.com/connect/xd_arbiter/dgdTycPTSRj.js?version=41#channel=f2ef911764&amp;origin=http%3A%2F%2Fppsspp.org" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/dgdTycPTSRj.js?version=41#channel=f2ef911764&amp;origin=http%3A%2F%2Fppsspp.org" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="http://ppsspp.org/index.html">PPSSPP</a>
+          <div class="nav">
+            <ul class="nav">
+              <li><a href="http://ppsspp.org/index-cn.html">首页</a></li>
+              <li><a href="http://ppsspp.org/downloads-cn.html">下载</a></li>
+              <li><a href="http://ppsspp.org/screenshots-cn.html">截图 &amp; 视频</a></li>
+              <li><a href="http://ppsspp.org/guides-cn.html">导航 &amp; 帮助</a></li>
+              <li><a href="http://forums.ppsspp.org/"><strong>论坛</strong></a></li>
+              <li><a href="http://ppsspp.org/contact-cn.html">联系我们</a></li>
+              <li><a href="http://ppsspp.org/index.html">English</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+		
+    <div class="container"  style="font-family:'微软雅黑'">
+      <div class="row">
+        <div class="hero-unit">
+          <div class="row">
+            <div class="span4">
+							<h1>PPSSPP</h1>
+              <DIV> 爱模拟&nbsp;爱折腾&nbsp;(一款PSP模拟器) </DIV>
+              <p>&nbsp;</p>
+              <p><a href="http://ppsspp.org/#news" style="font-size:200%"><strong><?php echo $current_version; ?></strong>版本&nbsp;现已推出！</a></p>
+							<p><img src="img/ppsspp-icon.png" width="64" height="64" alt="icon">
+              <a class="btn btn-primary btn-large" href="http://ppsspp.org/downloads.html" style="width:142px; height:32px;">
+                <span style="display:inline-block;vertical-align:middle;line-height:32px;">立即下载 »</span>
+              </a></p>
+							<p><img src="img/ppsspp-icon-gold.png" width="64" height="64" alt="icon gold">
+              <a class="btn btn-warning btn-large" href="http://central.ppsspp.org/buygold" style="width:142px; height:32px;">
+                <span style="display:inline-block;text-align:left;line-height:32px;width:200px;">捐赠黄金版PPSSPP</span>
+              </a>
+            </p></div>
+						<div class="span7"><!-- hidden-phone -->
+              <div id="my-slideshow" style="max-width: 480px; position: relative; height: 141.66666666666669px; ">
+                <a href="http://ppsspp.org/screenshots.html">
+									<ul class="bjqs" style="height: 272px; width: 100%; display: block;">
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Monster Hunter Freedom Unite" src="img/screens/small/monsterhunterfreedomunite.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Monster Hunter Freedom Unite</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="God of War: Ghost of Sparta" src="img/screenshots/god_of_war_gos.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">God of War: Ghost of Sparta</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Little Big Planet" src="img/screens/small/littlebigplanet.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Little Big Planet</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Ridge Racer 2" src="img/screens/small/ridgeracer2.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Ridge Racer 2</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Daxter" src="img/screens/small/daxter.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Daxter</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Gran Turismo" src="img/screens/small/granturismo.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Gran Turismo</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Grand Theft Auto: Vice City Stories" src="img/screens/small/gtavcs.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Grand Theft Auto: Vice City Stories</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Grand Theft Auto: Liberty City Stories" src="img/screens/small/gtalcs.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Grand Theft Auto: Liberty City Stories</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Wipeout Pure" src="img/screens/small/wipeoutpure.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Wipeout Pure</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Soul Calibur" src="img/screens/small/soulcalibur.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Soul Calibur</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Final Fantasy: Crisis Core" src="img/screens/small/finalfantasycrisiscore.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Final Fantasy: Crisis Core</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Gitaroo Man" src="img/screens/small/gitarooman.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Gitaroo Man</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: list-item;"><img title="Project Diva Extend" src="img/screenshots/projectdivaextend.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Project Diva Extend</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Megaman: Maverick Hunter X" src="img/screenshots/megaman_maverick.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Megaman: Maverick Hunter X</p></li>
+										<li class="bjqs-slide" style="height: 272px; width: 100%; display: none;"><img title="Virtua Tennis" src="img/screenshots/virtua_tennis.jpg" style="height: 272px; width: 100%;"><p class="bjqs-caption">Virtua Tennis</p></li>
+								  </ul>
+                </a>
+              <ul class="bjqs-controls v-centered"><li class="bjqs-prev"><a href="http://ppsspp.org/#" data-direction="previous" style="top: 18.566176470588236%; ">Prev</a></li><li class="bjqs-next"><a href="http://ppsspp.org/#" data-direction="forward" style="top: 18.566176470588236%; ">Next</a></li></ul></div>
+<!--
+								<iframe width="560" height="315" src="http://www.youtube.com/embed/HJJZvTmG5n4" frameborder="0" allowfullscreen></iframe> -->
+              <div>
+                <br>
+                <a href="https://twitter.com/PPSSPP_emu" class="twitter-follow-button" data-show-count="false" data-size="large">关注 @PPSSPP_emu</a>
+              </div>
+              <div>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </div>
+<div class="fb-like fb_iframe_widget fb_iframe_widget_fluid" data-href="https://www.facebook.com/pages/Ppsspp/343006152466916" data-send="true" data-width="300" data-show-faces="true" data-font="tahoma" data-colorscheme="dark" fb-xfbml-state="parsed" fb-iframe-plugin-query="app_id=&amp;color_scheme=dark&amp;font=tahoma&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FPpsspp%2F343006152466916&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=true&amp;width=300" style="display: block; width: 100%; height: auto; "><span style="vertical-align: top; width: 100%; height: auto; "><iframe name="f1141981e" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; visibility: hidden; position: static; width: 0px; height: 0px; " src="http://ppsspp.org"></iframe></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black" style="display: inline-block; width: 320px; height: 50px; " data-ad-client="ca-pub-3281131109267988" data-ad-slot="6642932432" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><iframe width="320" height="50" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="span4">
+          <h2>将PSP游戏高清化！</h2>
+          <p>PPSSPP可以在您的PC以及安卓设备上以全高清的分辨率来运行PSP游戏。PPSSPP在PSP实机画面模糊的小屏幕的基础上加以高清纹理化。</p>
+          <p>甚至在先进的安卓手机或者平板上，您可以以双倍分辨率来运行您所喜爱的PSP游戏！<br>
+          </p>
+          <p><a class="btn" href="http://ppsspp.org/screenshots.html">预览高清化的截图 »</a></p>
+        </div>
+        <div class="span4">
+          <h2>增强您的体验！</h2>
+          <ul>
+            <li>以高清或全高清的分辨率来运行游戏</li>
+            <li>在平板上以大屏幕来玩游戏</li>
+            <li>自定义屏幕按钮来操作，或者使用键盘或者外接手柄</li>
+            <li>随时随地存档、读档</li>
+            <li>扩大各向异性过滤以及缩放纹理</li>
+            <li>从您的实机上转移存档来继续体验</li>
+          </ul>
+       </div>
+        <div class="span4">
+          <h2>完全免费&amp;开放源码</h2>
+          <p>PPSSPP是一项基于GPL2.0(以及更高)许可的开源项目。我们欢迎您为PPSSPP的更新做出贡献！<br>
+           
+          PPSSPP的兼容性一直在提升，很大部分源于这些贡献。让我们在我们所支持的设备上运行PSP游戏！ </p>
+          <p><a class="btn" href="http://ppsspp.org/development.html">开发 »</a> <a class="btn" href="http://www.github.com/hrydgard/ppsspp">GitHub »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="span12">
+          <h2>新闻</h2>
+          <p><a href="http://ppsspp.org/downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> 下载 PPSSPP <?php echo $current_version; ?></a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> 购买 PPSSPP黄金版  <?php echo $current_version; ?></a>
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+      <p>© PPSSPP 2012年项目. PSP是索尼公司注册商标</p>
+      <small>这个页面的部分转载于安卓开源项目，根据Creative Commons 2.5 Attribution License使用</small> <!-- for the android logo -->
+		<p style="text-align:center;"><a href="http://tieba.baidu.com/f?kw=ppsspp" target="_blank">PPSSPP吧</a>&<a href="http://bbs.emufan.com/" target="_blank">雨滴网</a>译</p>
+	  </footer>
+	  
+
+    </div> <!-- /container -->
+	  <script src="index_html/1906763.5.3-respond-1.1.0.min.js"></script>­<style>@font-face {font-family:"font";src:url("https://")}@media (touch-enabled),(-webkit-touch-enabled),(-moz-touch-enabled),(-o-touch-enabled),(-ms-touch-enabled),(modernizr){#touch{top:9px;position:absolute}}@media (transform-3d),(-webkit-transform-3d),(-moz-transform-3d),(-o-transform-3d),(-ms-transform-3d),(modernizr){#csstransforms3d{left:9px;position:absolute;height:3px;}}#generatedcontent:after{content:":)";visibility:hidden}</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/bjqs-1.3.min.js"></script>
+
+		<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+		jQuery(document).ready(function($) {
+				$('#my-slideshow').bjqs({
+						'height' : 272,
+						'width' : 480,
+						'responsive' : true,
+						'showmarkers' : false
+				});
+		});
+		</script>
+	
+
+</body></html>

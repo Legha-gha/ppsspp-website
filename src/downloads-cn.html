@@ -1,0 +1,286 @@
+﻿<?php
+include("downloads-util.php");
+
+$title = 'PPSSPP 下载';
+$pagelang = 'cn';
+$navsel = 'downloads-cn.html';
+include("header.php");
+?>
+		<div class="container" style="font-family:'微软雅黑'">
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black" style="display: inline-block; width: 320px; height: 50px; " data-ad-client="ca-pub-3281131109267988" data-ad-slot="6642932432" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><iframe width="320" height="50" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+		</div>
+
+		<div class="container" id="maindownloads">
+			<hr>
+			<div class="row">
+				<div class="span12">
+          <strong><a href="http://ppsspp.org/devbuilds-cn.html" style="font-size: 18px"> 从Git直接获取开发编译 &gt;&gt;</a></strong>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>安卓PPSSPP黄金版 </h2>
+					<img src="img/ppsspp-icon-gold.png"  style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>如果你喜欢并且想支持PPSSPP，请购买PPSSPP黄金版!</p>
+          <p>注意: 除了图标之外，黄金版和普通版完全一样的，但是仍然会给你非一般的感觉，不是吗？</p>
+          </div>
+				<div class="span4">
+					<p><a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppssppgold">
+						<img alt="PPSSPP黄金版0.9.5google市场版" src="http://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+							 </a>
+					<br>
+					</p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+				  <h2>Windows版 黄金版PPSSPP </h2>
+					<img src="img/ppsspp-icon-gold.png"  style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>如果你想支持PPSSPP开发，请购买黄金版PPSSPP0.9.7!</p>
+				</div>
+				<div class="span4">
+					<p><a class="btn btn-warning btn-large" href="http://central.ppsspp.org/buygold"><img src="img/windows-36.png" height="36px">&nbsp;购买黄金版 PPSSPP </a>&nbsp;</p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>安卓PPSSPP</h2>
+					<img src="img/ppsspp-icon.png"  style="width: 72px; height: 72px; float:left; padding-right: 10px">在<a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">谷歌 Play</a> 上下载 最新版 PSP 模拟器,或者干脆从这里下载并安装apk文件。(打开这个网页并点击下面的链接即可，请确保您已经开启了 <a href="http://www.tech-recipes.com/rx/22616/android-allow-installation-of-non-market-apps/">non-Play-Store installs</a>):
+				</div>
+				<div class="span4">
+					<p><a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">
+						<img alt="PPSSPP 0.9.9 google市场版" src="http://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+							 </a>
+					<br>
+					</p>
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("ppsspp.apk"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/android-36.png" height="36px">&nbsp;';
+                echo '下载 ' . $v["version"] . " APK</a></p>\n";
+                $first = false;
+             }
+          ?>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>Windows版PPSSPP  </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>下载并运行安装器, 或者下载zip包并解压到你喜欢的地方。</p>
+          <p><strong>注意!</strong> 0.9.7以及更高版本需要微软新版VC运行库 :
+          </p>
+          <p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">VC运行库 2013 (必需!)</a></p>
+				</div>
+				<div class="span4">
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("ppsspp_win.zip"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                $first = false;
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
+                echo '下载 ' . $v["version"] . "版 ZIP</a></p>\n";
+             }
+          ?>
+				</div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black" style="display: inline-block; width: 320px; height: 50px; " data-ad-client="ca-pub-3281131109267988" data-ad-slot="6642932432" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><iframe width="320" height="50" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+			<hr>
+			<div class="row">
+          <a name="iOS"></a>
+				<div class="span8">
+          <h2>iOS版PPSSPP </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>借助Cydia，已越狱的iPhone 和 iPad设备可以运行PPSSPP了。 有人开设了 Cydia 源并不定期更新, 请看右边. angelXwind's repo 更新最频繁,  不过也有人说The Avenger's更快。</p><p>
+          </p>
+          <p>注意: 当您使用非官方编译时，一切风险将由您个人承担，PPSSPP项目将不会承担任何责任。</p>
+          <p>详情见<a href="http://forums.ppsspp.org/forumdisplay.php?fid=4">论坛</a>.</p>
+        </div>
+        <div class="span4">
+          <p>这些是非官方编译.</p>
+          <ul>
+            <li><a href="http://build.ppsspp.org/?page/downloads#ios">Karen (angelXwind)'s repo, cydia.angelxwind.net/</a> (<a href="cydia://cydia.ppsspp.org/"> Cydia中打开</a>)</li>
+            <!--<p><a class="btn btn-primary btn-large" href="itms-services://?action=download-manifest&amp;url=http://PPSSPP.tk/plist/ppsspp.plist">W.MS 的OTA 安装</a></p>-->
+          </ul>
+        </div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>黑莓PPSSPP </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>PPSSPP的黑莓10移植版。使用Sachesi 或者 Chrome 扩展从电脑上拷贝 .bar 文件。 感谢 xsacha 编译。</p>
+				</div>
+				<div class="span4">
+					<p><a class="btn btn-primary btn-large" href="http://ppsspp.org/files/0_9_9/PPSSPP-v0.9.9.bar"><img src="img/blackberry-36.png" height="36px">&nbsp;下载 0.9.9 .bar</a></p>
+					<p><a href="http://ppsspp.org/files/0_9_8/PPSSPP-v0.9.8.bar">下载 0.9.8 .bar</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">每日编译</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>Maemo版PPSSPP </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+				  <p>非官方移植版 PPSSPP。您将个人承担一切风险。</p>
+				</div>
+				<div class="span4">
+          <p><a href="http://cc.oulu.fi/~rantalai/maemo5/ppsspp/">Maemo版 PPSSPP 编译 </a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>Meego / Harmattan版PPSSPP </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+				  <p>Meego 移植版 PPSSPP。感谢xsacha编译。</p>
+				</div>
+				<div class="span4">
+          <p><a class="btn btn-primary btn-large" href="http://ppsspp.org/files/0_9_5/PPSSPP-v0.9.5.deb">下载0.9.5 .deb</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">每日编译</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>塞班PPSSPP </h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>塞班移植版 PPSSPP。感谢xsacha编译。</p>
+				</div>
+				<div class="span4">
+          <p><a class="btn btn-primary btn-large" href="http://ppsspp.org/files/0_9_8/PPSSPP-v0.9.8.sis">下载 0.9.8 .sis</a></p>
+          <p><a href="http://ppsspp.org/files/0_9_7/PPSSPP-v0.9.7.sis">下载0.9.7 .sis</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">每日编译</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>潘多拉掌机</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>潘多拉移植版 PPSSPP。不过您必须先搞明白安装方法 :) 感谢 ptitSeb.</p>
+				</div>
+				<div class="span4">
+          <p><a href="http://repo.openpandora.org/?page=detail&amp;app=ppsspp_ptitseb">OpenPandora repo</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>MacOS X</h2>
+          <p>angelXwind 操刀的非官方编译, 请看右边链接.</p>
+        </div>
+        <div class="span4">
+          <p>angelXwind的 OSX SDL 编译 (OSX 10.6+): </p>
+          <p><a href="http://build.ppsspp.org/?page/downloads#osx">下载</a></p>
+        </div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>Linux</h2>
+          <p>您可以下载源码, 或使用右边的非官方编译链接.</p>
+          <p>注意使用外部下载链接的风险将由您个人承担 </p>
+				</div>
+				<div class="span4">
+          <p><a href="http://build.ppsspp.org/?page/downloads#linux">编译</a></p>
+          <p><a href="http://www.noobslab.com/2014/02/ppsspp-psp-emulator-available-for.html">NoobsLabs's Ubunto PPA</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>立方体测试程序</h2>
+					<p>一个旋转立方体的 PSP 程序。在您从UMD中dump镜像之前，可以用这个程序在您的设备上测试模拟器。</p>
+						<a href="files/cube.elf"><img src="img/screenshots/cube.jpg"></a>
+				</div>
+				<div class="span4">
+					<p>&nbsp;<a class="btn btn-primary btn-large" href="http://ppsspp.org/files/cube.elf">&nbsp;下载 ELF</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span8">
+					<h2>源代码</h2>
+					<p><a href="http://ppsspp.org/development.html">从git获取最新源码</a> 并参与到模拟器的开发中来吧!</p>
+				</div>
+			</div>
+			<hr>
+		</div>
+
+		<div class="container">
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black" style="display: inline-block; width: 320px; height: 50px; " data-ad-client="ca-pub-3281131109267988" data-ad-slot="6642932432" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:50px;margin:0;padding:0;position:relative;visibility:visible;width:320px;background-color:transparent"><iframe width="320" height="50" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+		</div>
+
+		<div class="container">
+			<hr>
+			<div class="row">
+				<div class="span12">
+          <strong><a href="http://ppsspp.org/devbuilds-cn.html" style="font-size: 18px"> 从Git直接获取开发编译 &gt;&gt;</a></strong>
+				</div>
+			</div>
+  	</div>
+    <hr/>
+
+			<footer>
+				<p>© PPSSPP project 2012. PSP is a trademark of Sony, Inc.</p>
+			</footer>
+
+		</div> <!-- /container -->
+<?php include("footer.php"); ?>

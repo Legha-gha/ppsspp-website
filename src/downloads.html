@@ -1,0 +1,293 @@
+<?php
+include("downloads-util.php");
+$title = 'Downloads';
+$pagelang = 'en';
+$navsel = 'downloads.html';
+include("header.php");
+?>
+		<div class="container">
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black"
+               style="display:inline-block"
+               data-ad-client="ca-pub-3281131109267988"
+               data-ad-slot="6642932432"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+		</div>
+
+		<div class="container" id="maindownloads">
+			<hr/>
+			<div class="row">
+        <div class="span12">
+          <a href="devbuilds.html" style="font-size: 18px">Development builds directly from Git</a>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP Gold for Android</h2>
+					<img src="img/ppsspp-icon-gold.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>Do you want to support the development of PPSSPP? Buy the Gold version of PPSSPP for Android!</p>
+          <p>Note: Except for the icon, it's the same as the regular version, but it makes you feel good, too.</p>
+          </div>
+          <div class="span4">
+            <p><a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppssppgold&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180px"/></a>
+            </p>
+					<br>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Android</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>Download the latest version of this PSP emulator on <a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppsspp">Google Play</a>, or simply download and install the .apk files from here (surf to this page and touch this button on your device, make sure that you have enabled <a href="http://www.tech-recipes.com/rx/22616/android-allow-installation-of-non-market-apps/">non-Play-Store installs</a>):</p>
+				</div>
+				<div class="span4">
+          <p>
+          <a href="http://play.google.com/store/apps/details?id=org.ppsspp.ppsspp&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180px" /></a>
+          
+					</p>
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("ppsspp.apk"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/android-36.png" height="36px">&nbsp;';
+                echo 'Download ' . $v["version"] . " APK</a></p>\n";
+                $first = false;
+             }
+          ?>
+					<p><a href="http://f-droid.org/repository/browse/?fdid=org.ppsspp.ppsspp">Download from f-droid</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Windows</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>Download the ZIP file and unpack it where you like. Installers are coming soon.</p>
+          <p><strong>NOTE!</strong> 0.9.7-0.9.9.1 require a new version of the VC runtime from Microsoft (1.0 has removed this requirement): <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">VC 2013 runtime</a></p>
+				</div>
+				<div class="span4">
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("ppsspp_win.zip"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                $first = false;
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
+                echo 'Download ' . $v["version"] . " zip</a></p>\n";
+             }
+          ?>
+				</div>
+      </div>
+      <hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP Gold for Windows</h2>
+					<img src="img/ppsspp-icon-gold.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>Do you want to support the development of PPSSPP? Buy the Gold version of PPSSPP for Windows!</p>
+          <p>NOTE: Currently temporarily unavailable.</p>
+				</div>
+				<div class="span4">
+					<p><a class="btn btn-warning btn-large" href="http://central.ppsspp.org/buygold"><img src="img/windows-36.png" height="36px">&nbsp;Buy PPSSPP Gold</a>&nbsp;</p>
+				</div>
+			</div>
+			<hr/>
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black"
+               style="display:inline-block"
+               data-ad-client="ca-pub-3281131109267988"
+               data-ad-slot="6642932432"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+			<hr/>
+			<div class="row">
+          <a name="iOS"></a>
+				<div class="span8">
+          <h2>PPSSPP for iOS</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+          <p>PPSSPP works on jailbroken iPhones and iPads with Cydia installed.</p>
+        </div>
+        <div class="span4">
+          <ul>
+            <li><a href="cydia://cydia.ppsspp.org/">PPSSPP Cydia Repo</a></li>
+            <li><a href="http://build.ppsspp.org/">More info</a></li>
+          </ul>
+        </div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for MacOSX</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+        </div>
+        <div class="span4">
+          <p><a href="http://build.ppsspp.org/?page/downloads#osx">OSX builds</a></p>
+        </div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Blackberry</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>This is a Blackberry 10 port of PPSSPP. Sideload the .bar from your computer using Sachesi or Chrome extension. Thanks to xsacha for doing the build.</p>
+          <p>Note! Blackberry is no longer supported.</p>
+				</div>
+				<div class="span4">
+					<p><a class="btn btn-primary btn-large" href="files/0_9_9/PPSSPP-v0.9.9.bar"><img src="img/blackberry-36.png" height="36px">&nbsp;Download 0.9.9 .bar</a></p>
+					<p><a href="files/0_9_8/PPSSPP-v0.9.8.bar">Download 0.9.8 .bar</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">Daily builds</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Maemo</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>Note! Maemo is not officially supported.</p>
+				</div>
+				<div class="span4">
+          <p><a href="http://www.cs.helsinki.fi/u/rantalai/ppsspp/">Some PPSSPP builds for Maemo</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Meego / Harmattan</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>This is a Meego port of PPSSPP. Thanks to xsacha for doing the build.</p>
+					<p>Note! Meego is no longer supported.</p>
+				</div>
+				<div class="span4">
+          <p><a class="btn btn-primary btn-large" href="files/0_9_5/PPSSPP-v0.9.5.deb">Download 0.9.5 .deb</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">Daily builds</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Symbian</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>This is a Symbian port of PPSSPP. Thanks to xsacha for doing the build.</p>
+					<p>Note! Symbian is no longer supported.</p>
+				</div>
+				<div class="span4">
+          <p><a class="btn btn-primary btn-large" href="files/0_9_9/PPSSPP-v0.9.9.sis">Download 0.9.9 .sis</a></p>
+          <p><a href="files/0_9_8/PPSSPP-v0.9.8.sis">Download 0.9.8 .sis</a></p>
+          <p><a href="http://qtness.com/ppsspp.html">Daily builds</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Pandora</h2>
+					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
+					<p>This is a Pandora port of PPSSPP. You will have to figure out how to install it :) Thanks to ptitSeb.</p>
+				</div>
+				<div class="span4">
+          <p><a href="http://repo.openpandora.org/?page=detail&app=ppsspp_ptitseb">OpenPandora repo</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>PPSSPP for Linux</h2>
+          <p>You can download the source, or use one of the unofficial builds to the right.</p>
+          <p>Note that downloading from these external sites is on your own risk.</p>
+				</div>
+				<div class="span4">
+          <p><a href="http://build.ppsspp.org/?page/downloads#linux">Linux builds</a></p>
+          <p><a href="https://launchpad.net/~ppsspp/+archive/ubuntu/stable">Launchpad PPA Stable</a></p>
+          <p><a href="https://launchpad.net/~ppsspp/+archive/ubuntu/testing">Launchpad PPA Testing</a></p>
+          <!--
+          <p><a href="http://www.noobslab.com/2014/02/ppsspp-psp-emulator-available-for.html">NoobsLab.com PPA support for Ubuntu/Linux Mint/Debian</a></p>
+          -->
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>Cube test program</h2>
+					<p>A PSP program that draws a spinning cube. For testing that the emu works on your device before you dump your UMDs.</p>
+					<a href="files/cube.elf"><img src="img/screenshots/cube.jpg"></a>
+				</div>
+				<div class="span4">
+					<p>&nbsp;<a class="btn btn-primary btn-large" href="files/cube.elf">&nbsp;Download ELF</a></p>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="span8">
+					<h2>Source code</h2>
+					<p>Get the <a href="development.html">latest source from git</a> and join us in developing the emulator!</p>
+				</div>
+			</div>
+			<hr>
+		</div>
+
+		<div class="container">
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black"
+               style="display:inline-block"
+               data-ad-client="ca-pub-3281131109267988"
+               data-ad-slot="6642932432"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+		</div>
+
+		<div class="container" id="maindownloads">
+			<hr/>
+			<div class="row">
+        <div class="span12">
+          <a href="devbuilds.html" style="font-size: 18px">Development builds directly from Git</a>
+				</div>
+			</div>
+    </div>
+
+    <hr/>
+
+    <footer>
+      <p>&copy; PPSSPP project 2012-. PSP is a trademark of Sony, Inc.</p>
+    </footer>
+<?php include("footer.php"); ?>

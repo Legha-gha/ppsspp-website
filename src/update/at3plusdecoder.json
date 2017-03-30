@@ -1,0 +1,9 @@
+{
+  "Win32": "http://www.ppsspp.org/unofficial/Win32/at3plusdecoder.dll",
+  "Win64": "http://www.ppsspp.org/unofficial/Win64/at3plusdecoder64.dll",
+  "armeabi": "http://www.ppsspp.org/unofficial/armeabi/libat3plusdecoder.so",
+  "armeabi-v7a": "http://www.ppsspp.org/unofficial/armeabi-v7a/libat3plusdecoder.so",
+  "MacOSX64": "http://www.ppsspp.org/unofficial/MacOSX64/libat3plusdecoder.dylib",
+  "ios": "http://www.ppsspp.org/unofficial/ios/libat3plusdecoder.dylib",
+  "blackberry10": "http://www.ppsspp.org/unofficial/blackberry10/libat3plusdecoder.so",
+}

@@ -1,0 +1,56 @@
+<?php
+$title = 'Getting games for PPSSPP';
+$pagelang = 'en';
+$navsel = 'index.html';
+include("header.php");
+?>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <style>
+          .responsive-black { width: 320px; height: 50px; }
+          @media(min-width: 500px) { .responsive-black { width: 468px; height: 60px; } }
+          @media(min-width: 800px) { .responsive-black { width: 728px; height: 90px; } }
+          </style>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Responsive Black -->
+          <ins class="adsbygoogle responsive-black"
+               style="display:inline-block"
+               data-ad-client="ca-pub-3281131109267988"
+               data-ad-slot="6642932432"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+					<h2>PSP Games</h2>
+          <h3>What are they?</h3>
+          <p>PSP games are games created for the Sony Playstation Portable, or PSP for short. They are normally sold as either small plastic discs or as downloadable content. To use them with PPSSPP, we must turn them into files. An "ISO file" is a raw copy of a disc, which can be compressed into a "CSO", or compressed iso. For instructions on how to do this yourself, see the <a href="faq.html">FAQ</a>.</p>
+          <p>PSP games that have been downloaded from PSN onto a real PSP can be copied off the PSP and played directly.</p>
+          <h3>How do I get them on my device?</h3>
+          <p>If you are running the PC version of PPSSPP and you have the game you want to run as an ISO, just do File-Load, or use the Games tab to navigate to your game. Clicking ".." moves up a directory level.</p>
+          <p>If you want to play on your Android device (or other portable), then follow these steps:</p>
+          <ul>
+            <li>Install PPSSPP on your device</li>
+            <li>Connect the device to your PC where you are storing the ISO or CSO file. Android devices can be easily connected via USB cable.</li>
+            <li>The device should show up in Windows Explorer. Now simply copy over the files to somewhere easy to remember - for example, create a folder called "PSP ISO" and copy your ISO and CSO files there.</li>
+            <li>Now, start PPSSPP, navigate to your new ISOs on the Games tab, then click the game, which now should show up with an icon.</li>
+            <li>The game should now start.</li>
+          </ul>
+          <p>That's it!</p>
+          <h3>Improving performance</h3>
+          <ul>
+            <li>Use frameskipping (Graphics settings)</li>
+            <li>Disable alpha test (WARNING: This breaks some games) (Graphics settings)</li>
+            <li>Turn on multithreading (System settings). Warning! This will break some games. So if you have trouble with other games, remember to turn it off.</li>
+            <li>Try changing Rendering Mode to both buffered and unbuffered.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; PPSSPP project 2012. PSP is a trademark of Sony, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+<?php include("footer.php"); ?>

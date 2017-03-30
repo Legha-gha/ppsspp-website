@@ -1,0 +1,412 @@
+<?php
+$title = "PPSSPP";
+$pagelang = 'en';
+$navsel = 'index.html';
+include("header.php");
+?>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h1>PPSSPP History</h1>
+          <p><a href="/index.html">Go back to the main page</a></p>
+        </div>
+      </div>
+      
+      <hr>
+
+      <div class="row">
+        <div class="span12">
+          <h2>News</h2>
+          <a name="news"></a>
+
+          <h3>February 14, 2016: PPSSPP 1.2.1 has been released!</h3>
+          <ul>
+            <li>A bunch of stability fixes when switching apps on Android</li>
+            <li>Updated the fonts for Chinese and Korean to cover some previously unsupported chars</li>
+          </ul>
+
+          <h3>February 14, 2016: PPSSPP 1.2 is out!</h3>
+          <p>As usual, a ton of fixes and improvements:</p>
+
+          <ul>
+            <li>A major rework of sceAtrac audio decoding, fixing various music hangs and similar issues
+            <li>Many fixes and workarounds to depth and stencil buffer usage, and also FBO management</li>
+            <li>Audio reverb support</li>
+            <li>Combo keys - custom touch buttons that press multiple PSP buttons</li>
+            <li>5xBR upscaling on GPU (postprocessing effect)</li>
+            <li>Fix problems with playback of video with mono audio</li>
+            <li>Performance improvements like multithreaded audio mixing</li>
+            <li>ARM64 JIT crash bug fixes</li>
+            <li>GLSL shader cache to reduce stuttering ingame</li>
+            <li>Support render-to-CLUT functionality that some games use to change colors of various monsters</li>
+            <li>x86-64 support on Android</li>
+            <li>Auto-hide on-screen controls after a while of no usage</li>
+            <li>Fixes to prescale UV speedhack, now seems reliable</li>
+            <li>Faster ISO RAM cache</li>
+            <li>New UI for moving around the PSP display on larger screens</li>
+            <li>Minor UI fixes like better slider controls</li>
+            <li>Assorted stability fixes (ffmpeg crash, etc)</li>
+            <li>Volume setting is back</li>
+            <li>Preparations for supporting more graphics APIs</li>
+            <li>AdHoc port offset</li>
+            <li>Support another HD remaster (Sora no Kiseki Kai HD)</li>
+          </ul>
+          
+          <h3>October 15, 2015: Note for iOS jailbreak users - don't upgrade to iOS 9.0+</h3>
+          <p>Do not upgrade to iOS 9.0+ if you want to keep running PPSSPP short term, stay on 8.4 or earlier. The new jailbreak seems a bit unstable as well.</p>
+          <p>PPSSPP is not officially supported on iOS like Windows and Android, but we try to keep it working anyway - 9.0 is tricky though, at least if you want to use the JIT. There will probably be a solution but probably not soon.</p>
+          <h3>October 12, 2015: PPSSPP 1.1.1 has been released!</h3>
+          <p>Fixes a few crash bugs in 1.1.</p>
+          <ul>
+            <li>Fixed new crash in Persona and other games on ARM64, like Galaxy S6</li>
+            <li>Fixed crashes when trying to launch web browser when not present on Android, like on Android TV</li>
+            <li>Fix crash in games that used "depal" functionality (OpenGL)</li>
+            <li>Fixed rounding mode problems in the JITs</li>
+            <li>Fix crash when loading savestates many times, and savestate compatibility on Android-x86</li>
+            <li>Fix minor glitch in Ridge Racer</li>
+          </ul>
+          <h3>October 4, 2015: PPSSPP 1.1!</h3>
+          <p>It's been a while, but there are some major new features!</p>
+          <ul>
+            <li>Support for ARM64 on Android, for improved performance on new devices. Has some new optimizations.</li>
+            <li>Support Android TV, like nVidia Shield TV</li>
+            <li>Screen rotation on PC, useful for vertical games like Star Soldier</li>
+            <li>Many minor performance improvements and compatibility bug fixes</li>
+            <li>GPU emulation fixes like correct depth rounding, fixing text in Phantasy Star</li>
+            <li>Other graphical fixes like UV rotation</li>
+            <li>Support savestates for homebrew apps</li>
+            <li>Simple integrated "Homebrew Store" to download PSP homebrew apps</li>
+            <li>Minor AdHoc multiplayer improvements. Still many issues left.</li>
+            <li>Disable a dangerous optimization on ARM, causing walk-through-walls in Tenchu</li>
+            <li>sceAtrac music compatibility fixes, fixing noise in a few games</li>
+            <li>Better texture scaling performance</li>
+            <li>Direct3D closer in features to OpenGL</li>
+            <li>Works better on BSD operating systems</li>
+            <li>Savedata management UI</li>
+          </ul>
+          <h3>February 26, 2015: PPSSPP 1.0.1 is out!</h3>
+          <p>1.0 shipped with broken scrolling in the savestate list, that and a few other small bugs are now fixed in 1.0.1.</p>
+          <ul>
+          <li>Bugfixes like the save state scroll issue, cosmetic issues like overscroll</li>
+          <li>Some cheat code bugfixes</li>
+          <li>Adler32 and Mersenne Twister modules added (fixes some obscure games)</li>
+          <li>Fix for Jak &amp; Daxter slowdown</li>
+          <li>Graphics hack for Phantasy Star Portable 2 for Direct3D9</li>
+          <li>Fix compatibility with some PowerVR devices broken since v0.9.5-959-g4998044</li>
+          </ul>
+
+          <h3>February 1, 2015: 1.0!</h3>
+          <p>Finally, 1.0 is out, with a ton of new improvements! Note that it can take a while for it to become available in the Play store, depending on your location and Google's datacenters.</p>
+
+          <p>Full improvements list:</p>
+          <ul>
+          <li>Many, many bug fixes in JIT and elsewhere, improving compatibility</li>
+          <li>Proper fix for Zenfone and related devices</li>
+          <li>Direct3D 9 supported as a rendering backend on Windows, helps on old GPUs and can be faster than OpenGL in many cases</li>
+          <li>You can now create specific configs per game</li>
+          <li>FPU rounding modes much better supported, fixes the Peace Walker boss that was undefeatable. NOTE: This breaks saves in Gods Eater - you must turn off the better rounding, load your save game, turn it on and save.</li>
+          <li>The JIT now uses SSE on x86, improving speed considerably. This does not affect ARM devices, that's for the next version or two.</li>
+          <li>Improved audio output code on both Windows and Android, reducing audio latency on Windows and on some Android systems</li>
+          <li>FFMPEG upgraded, fixed some music hangs ("GHA phase shifts")</li>
+          <li>Some Ad Hoc improvements, coldbird.net is now default adhoc server. Ad Hoc still unfinished and hard to use.</li>
+          <li>Graphics fixes: Bezier/spline drawing fixes, vertex position fixes, DanganRonpa on Adreno fixed, flat shading fixed, vertex cache improved, some PowerVR blockiness issues fixed, screen scaling filter added, Google Cardboard support</li>
+          <li>Simulate UMD speed better, fixing hangs in several games</li>
+          <li>More Atrac3 fixes, fixing hangs</li>
+          <li>Somewhat better disk full handling</li>
+          <li>Fixes to dynamic unloading of code, fixing problems in GEB and TRM 2/3</li>
+          <li>Updated to SDL2 where applicable (Linux, Mac)</li>
+          <li>Some new features, like analog/dpad-swap hotkey, graphics hack for Phantasy Star, show last bit of debug log in dev tools, etc</li>
+          <li>No more need for MSVCRT DLLs on Windows</li>
+          </ul></p>
+          <p>Enjoy!</p>
+
+          <h3>August 18, 2014: 0.9.9.1 update released</h3>
+          <p>A few issues have been discovered in the release that need fixing, the Star Ocean fix had a bug and there are some unexpected slowdowns.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.9.9.1!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold 0.9.9.1!</a>
+          <p><strong>NOTE:</strong> The Windows version of 0.9.7+ requires <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">new runtime DLLs.</a>.</p>
+
+          <h3>July 22, 2014: 0.9.9 is here!</h3>
+          <p>PPSSPP 0.9.9 has been a long time coming but it's finally here! Here's the usual list of what's new:</p>
+          <ul>
+            <li>CLUT (paletted) texturing from framebuffers supported, fixing many graphical issues like the shadows in Final Fantasy: Type-0</li>
+            <li>More types of framebuffer copies are now handled correctly, fixing a variety of graphical issues, like the sun in Burnout and many more</li>
+            <li>Better savedata compatibility with the real PSP</li>
+            <li>Support for more codecs used by "Custom BGM" and sometimes regular music in games: MP3, AAC</li>
+            <li>PMP video format support</li>
+            <li>Implemented some strange blending modes like ABSDIFF as shaders, fixing the outlines in DBZ Tag Team and more.</li>
+            <li>Emulation of the vrot CPU instruction improved - it caused cracks in FF3 graphics before</li>
+            <li>Many bugfixes around the UI, touch D-pad now works better when scaled large</li>
+            <li>Workaround implemented to support Star Ocean's stencil trickery as efficiently as possible on all platforms</li>
+            <li>Major corrections to module loading and memory management, fixing further games</li>
+            <li>Bulgarian and Thai language translations were contributed</li>
+            <li>Many, many more game fixes and bug fixes</li>
+          </ul>
+          <p>Please note that some of the new graphical fixes may cause slowdown in some games. If you are OK with the previous glitches and want to play at the previous speed, there's a new option "Disable slow effects" for you. Also try the new Display Resolution setting.</p>
+
+
+          <h3>March 22, 2014: 0.9.8 - Xperia fix and more</h3>
+          <p>PPSSPP 0.9.8 is now available!</p>
+          <ul>
+            <li>OpenGL ES 3 detection bug on Xperia devices fixed, graphics work again.</li>
+            <li>More accurate audio mixing and emulation</li>
+            <li>Software rendering and display list performance improvements</li>
+            <li>Workaround for timing issue hanging Crash Tag Team Racing</li>
+            <li>Galician language</li>
+            <li>Built-in ARM disassembler improvements (dev feature)</li>
+            <li>Fix for immersive mode volume key issue on Android Kitkat</li>
+            <li>And more minor tweaks and fixes as always.</li>
+          </ul>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.9.8!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold 0.9.8!</a>
+          <h3>
+          <a href="/index_more.html">Older releases &raquo;</a>
+          </h3>
+
+          <h3>February 15 &amp; 17, 2014: 0.9.7.1 - minor bugfix release</h3>
+          <p>An annoying rotation lock bug slipped through, and haptic feedback was broken. Both have been fixed.</p>
+          <p>UPDATE: One more release, fixing a drastic slowdowns in a couple of games.</p>
+
+          <h3>February 14, 2014: PPSSPP 0.9.7 is out!</h3>
+          <p>Another release! More fixes and compatibility, and various little features. Here's the list:</p>
+          <ul>
+            <li>Several scheduling and audio fixes, fixing black screens in Yu Gi Oh games among other things.
+            <li>Screen rotation and immersive mode support on Android</li>
+            <li>Large improvements to the software renderer (still not really playable, but looks right more
+              often than not)</li>
+            <li>New VPL allocator and bugfixes, fixing Pangya Golf performance problems.</li>
+            <li>Some mpeg/video playback fixes, fixing Parappa The Rapper and others. Some issues remain.</li>
+            <li>Fix save state bugs causing incompatibility between 32 and 64-bit platforms.</li>
+            <li>Symbol map/debugger improvements</li>
+            <li>Depth buffer copy, fixing Jeanne D'arc. May cause minor slowdowns though, this will be worked
+              around in the future.</li>
+            <li>MsgDialog fixes. Saving fixed in numerous games.</li>
+            <li>Initial multitouch support on Windows 8 for on-screen controls.</li>
+          </ul>
+          <p>Please note that it often takes a few hours to roll out an update on Google Play, so you may not see it there immediately.</p>
+          <p><strong>NOTE:</strong> The Windows version of 0.9.7 requires <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">new runtime DLLs.</a>.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.9.7!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold 0.9.7!</a>
+          <p>If you have questions or want to report problems, don't forget to check the <a href="http://forums.ppsspp.org/">forum</a>.</p>
+
+          <h3>February 4, 2014: 0.9.7 is coming soon</h3>
+          <p>The next release, 0.9.7, will have a bunch of fixes that many of you have been waiting for - for example, the Yu Gi Oh games no longer hang when you attempt to move. Also, you will be able to play in portrait mode on Android, and more. Stay tuned for the release, which if all goes well will happen in a week or so.</p>
+
+          <h3>December 12, 2013: Fixed crash bug</h3>
+          <p>A bug snuck in that causes the game list on Android to either display a blank or crash if it sees a ZIP or RAR file.
+          <p>This has now been fixed and been pushed to Google Play, and the downloads on this site have been updated.</p>
+
+          <h3>December 12, 2013: 0.9.6 is here!</h3>
+          <p>That's right, it's here, in good time for the holidays! This time the main focus has been on speed improvements, but there has obviously been quite a few bug fixes as well, and a new lighter look for the on screen touch controls. Enjoy! And if you're having fun, don't forget to support the project by buying the <a href="http://gold.ppsspp.org/">Gold</a> version.</p>
+          <ul>
+            <li>Large general speed improvements and assorted bug fixes</li>
+            <li>"Software Skinning" option which speeds up many games with animated 3D characters</li>
+              (but may slow down a few, like Monster Hunter - experiment with turning it off)</li>
+            <li>Various fixes around stencil/alpha, reducing glow problems in Wipeout and Gods Eater Burst.</li>
+            <li>Timing improvements making more games run at the correct FPS, also fixing some audio issues</li>
+            <li>More debugger features</li>
+            <li>Better looking and individually resizable touch controls</li>
+            <li>Automatic install of games from ZIP files, like demos and many homebrew.</li>
+            <li>Software renderer improvements</li>
+            <li>VERY basic ad-hoc online play support, to be improved in future versions.</li> 
+            <li>And more...</li>
+          </ul>
+
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP!</a></p>
+          <h3>December 12, 2013: Fixed crash bug</h3>
+          <p>A bug snuck in that causes the game list on Android to either display a blank or crash if it sees a ZIP or RAR file.
+          <p>This has now been fixed and been pushed to Google Play, and the downloads on this site have been updated.</p>
+
+          <h3>December 12, 2013: 0.9.6 is here!</h3>
+          <p>That's right, it's here, in good time for the holidays! This time the main focus has been on speed improvements, but there has obviously been quite a few bug fixes as well, and a new lighter look for the on screen touch controls. Enjoy! And if you're having fun, don't forget to support the project by buying the <a href="http://gold.ppsspp.org/">Gold</a> version.</p>
+          <ul>
+            <li>Large general speed improvements and assorted bug fixes</li>
+            <li>"Software Skinning" option which speeds up many games with animated 3D characters</li>
+              (but may slow down a few, like Monster Hunter - experiment with turning it off)</li>
+            <li>Various fixes around stencil/alpha, reducing glow problems in Wipeout and Gods Eater Burst.</li>
+            <li>Timing improvements making more games run at the correct FPS, also fixing some audio issues</li>
+            <li>More debugger features</li>
+            <li>Better looking and individually resizable touch controls</li>
+            <li>Automatic install of games from ZIP files, like demos and many homebrew.</li>
+            <li>Software renderer improvements</li>
+            <li>VERY basic ad-hoc online play support, to be improved in future versions.</li> 
+            <li>And more...</li>
+          </ul>
+
+          <p>Please note that it often takes a few hours to roll out an update on Google Play, so you may not see it there immediately.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+          <p>If you have questions or want to report problems, don't forget to check the <a href="http://forums.ppsspp.org/">forum</a>.</p>
+
+          <h3>November 15, 2013: Plans for the next release - It's time for speed!</h3>
+          <p>Think PPSSPP is already fast on your PC? Or is it running a little slow in your mobile device?</p>
+          <p>Just wait until the next release. We are currently focusing hard on performance and have already made some really good improvements, for example
+          FF:CC wasn't really playable on Nexus 4 but on current development builds it's pretty smooth! And GTA runs fullspeed on nVidia Shield with only a frameskip of 1.<p>
+          <p>Obviously this doesn't mean that a Galaxy Y will suddenly play God of War, but whatever device you have, there will be improvement.</p>
+          <p>Stay tuned!</p>
+        
+          <h3>November 1, 2013: PPSSPP one year anniversary - 0.9.5 released!</h3>
+          <p>Two months since the last release, and today's the 1-year anniversary of the PPSSPP project! What better day to release a new version?</p>
+          <p>While nothing is perfect, there have been plenty of improvements since the last one, much thanks to all our contributors! Here's a shortlist of top new features:</p>
+          <ul>
+            <li> Atrac3+ plugin no longer required! Thanks Maxim for hard reverse-engineering work</li>
+            <li> Many, many emulation fixes, including:
+            <ul>
+              <li>bezier/spline curve support, fixing Loco Roco and others</li>
+              <li>stencil clear emulation, fixing Final Fantasy IV text</li>
+            </ul>
+            <li> Android-x86 support</li>
+            <li> Post-processing shaders like FXAA, scanlines, vignette</li>
+            <li> More solid save states (we will try to keep them working from now on. Save states only upgrade forward, not backward to older versions though)</li>
+            <li> Change render resolution independently of window size</li>
+            <li> Massive debugger improvements on Windows, by Kingcom and unknownbrackets (GE)</li>
+            <li> Win32 menu bar is now translatable. Language changes are applied instantly.</li>
+            <li> Win32: Ability to store PPSSPP's config files and memory stick files in places other than the same directory</li>
+            <li> Qt audio fixed, Symbian audio and ffmpeg is now threaded for more consistent media processing</li>
+            <li> Haptic feedback support for mobile devices</li>
+            <li> Accurate system information for mobile devices</li>
+            <li> Analog controller support for Blackberry</li>
+            <li> Windows installer (coming soon)</li>
+          </ul>
+          <p>Enjoy!</p>
+
+          <p>Please note that it often takes a few hours to roll out an update on Google Play, so you may not see it immediately.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+          
+          <p>If you have questions or want to report problems, don't forget to check the <a href="http://forums.ppsspp.org/">forum</a>.</p>
+
+          <h3>October 25, 2013: 0.9.5 coming soon!</h3>
+          <p>On November 1, it's the 1 year anniversary of the PPSSPP project. You will all get to celebrate it by playing PPSSPP 0.9.5!</p>
+
+          <h3>August 21, 2013: 0.9.1 fixes a couple of bugs</h3>
+          <p>0.9 was a big release and a couple of bad bugs slipped through, including a crash bug in the settings menu and a bug that turned on error reporting for everyone, which is a bit much for our server. So 0.9.1 is just a boring bugfix release, but please install it! :)</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.9.1!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+          <p><a href="http://forums.ppsspp.org/showthread.php?tid=574">Gameplay Videos!</a></p>
+          <h3>August 20, 2013: 0.9 is finally out! Enjoy!</h3>
+          <p>Nearly two months of no release are over, and a new PPSSPP is out. As always, there have been incredible progress:</p>
+          <ul>
+            <li>Much improved control mapping, and autoconfig for a few devices like Shield</li>
+            <li>Large speed boosts in many games</li>
+            <li>Improved touchscreen control latency, important for rhythm games</li>
+            <li>Huge improvements to our internal PSP debugger by Kingcom!</li>
+            <li>A number of new games became compatible, such as Final Fantasy Tactics which just has some audio issues left.</li>
+            <li>A completely redesigned user interface, unlike the previous static one this one can grow with the emulator and has keyboard/controller navigation support, for the full lean-back experience!</li>
+            <li>Improved frameskipping, increasing playability on slower devices.</li>
+          </ul>
+          <p>So get downloading and enjoy! And thank all the contributors for their incredible work.</p>
+          <p>The Android version will automatically upgrade during the next few hours if you installed it from Google Play.</p>
+          <p><small>If you bought the Gold version for Windows before, just use the email you got to log in and download the update.</small></p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.9!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+          <p><a href="http://forums.ppsspp.org/showthread.php?tid=574">Gameplay Videos!</a></p>
+
+          <h3>August 18, 2013: 2-3 days left to 0.9</h3>
+          <p>It's taken a bit longer than calculated but I'm estimating a release date of August 20 or 21. Some last minute issues to fix but it's soon ready for release! Full nVidia Shield support, an Ouya release will follow a little bit later. See below for more about 0.9.</p>
+
+          <h3>August 3, 2013: 0.9 status update</h3>
+          <p>0.9 will arrive in mid-August (in about two weeks), with full automap support for nVidia Shield controls. Will also try to get the Ouya version out slightly after, also with automatically mapped gamepad controls. Shield runs PPSSPP quite well, many games reach full speed and are extremely playable with the excellent hardware controls. Of course, all other Android devices with gamepads will work too, in some cases you might have to tweak the button mapping manually though.</p>
+          <p>Also, I've done quite a bit of work on the JITs for 0.9, so expect a modest to large speed boost too on all platforms, especially ARM-based ones - plus some additional compatibility.</p>
+
+          <h3>July 11, 2013: PPSSPP Gold for Windows and plans for 0.9</h3>
+          <p>For those of you who wanted to donate but did not have an Android device, you can now buy PPSSPP for Windows here: <a href="http://central.ppsspp.org/buygold">Buy Gold</a>. This also marks the launch of PPSSPP Central where we will later add a compatibility database, screenshot uploads and more in the future - right now all you can do is download the Gold version though.</p>
+          <p>As for 0.9 plans, you can look forward to a new UI with great gamepad support throughout, and an official <a href="http://ouya.tv">Ouya</a> version. In addition, there will be the usual bunch of compatibility fixes, and hopefully we'll be able to squeeze in a few speed improvements, too.</p>
+
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold here!</a>
+
+
+          <h3>June 26, 2013: 0.8.1 has been released</h3>
+          <p>0.8.1 is pretty much just a crash fix release, fixing a couple of possible crashes around downloading the Atrac3+ plugin.<?p>
+          <p>For more info see the 0.8 post below :)</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.8.1!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+          <p><a href="http://forums.ppsspp.org/showthread.php?tid=574">Gameplay Videos!</a></p>
+          <p><a href="screenshots.html">Cool new HD screenshots!</a></p>
+
+          <h3>June 23, 2013: 0.8 is here!</h3>
+          <p>Here we go! 0.8, now available for Windows and Android*, brings you the following new features:</p>
+          <ul>
+            <li>Full video and audio playback in most games (audio requires an optional plugin)</li>
+            <li>Huge increases in compatibility! Final Fantasy: Crisis Core is fully playable on fast devices, for example.</li>
+            <li>Lots of little things like easy screenshot taking, the beginnings of a cheat feature, etc</li>
+          </ul>
+          <p>Thanks to all the contributors making this possible! I want to call out unknownbrackets and oioitff for outstanding additions.</p>
+
+          <p>So get downloading! It may take Google Play some time to update to 0.8.</p>
+          <p>*For those of you on iOS and Blackberry, 0.8 builds will be available soon. We are still looking for a volunteer to maintain a Mac build.</p>
+          <p>Henrik</p>
+          <p>Note: A Gold version for Windows is coming in the next few days, for those who want to support the project but don't have Android.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.8.1!</a></p>
+					<p><img src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold!</a>
+
+          <h3>June 8, 2013: Yes, 0.8 is coming soon</h3>
+          <p>It's been far too long since the last version but we've made an insane amount of progress. The huge addition of video and audio playback has taken a while and destabilized the emu, but it's really starting to shape up now, so the official version 0.8 will be released within the next two weeks. You won't be disappointed, look forward to games like Crisis Core being pretty much fully playable. Thanks for your patience and support!</p>
+          <h3>April 22, 2013: 0.7.6: Major compatibility fixes!</h3>
+          <p>A serious bug was <a href="https://github.com/hrydgard/ppsspp/commit/1dd738f3119d5171e6c1b2ea974e5a6f21fd810f">fixed</a> and suddenly a ton of vexing issues just dissappeared! For example, the 3D graphics being black in Persona 3 and the large graphics errors in the two main GTA games. Those are now very playable (on PC, a bit heavy for mobile)! Also, I found a major bug affecting Little Big Planet among others, fixing that as well.  The UI now also has multi-language support, it's in Settings-&gt;System. All these fixes are enough to motivate a new official release, so here we go - 0.7.6! It may take a few hours before it's visible on Google Play.</p>
+					<h3>April 14, 2013: 0.7.5 is out and better than ever!</h3>
+<p>Another month, another version of PPSSPP! This time I've only added 0.0.5 to the version number, but that's just because I'm saving 0.8, 0.9 and 1.0 for big future updates :) Don't worry, there's been plenty of improvements. Many more games run and some games run faster - the God of War games should now run well on modest PCs and for example the Monster Hunter games are becoming playable on fast phones (although without sound). And I've started to improve the UI - now there's a recent list and game icons in the game selector.</p>
+<p>Anyway, stop reading and try it out! And don't forget to buy the Gold version if you use Android and want to support further development.</p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.7.5!</a></p>
+
+          <h3>March 20, 2013: iOS builds available on Cydia</h3>
+          <p>A couple of volunteers, angelXwind and the_avenger, have started to post iOS builds regularly, and basic Mac builds (better UI is coming). Check out the iOS and Mac sections of the <a href="downloads.html#iOS">downloads page</a>.
+					<h3>March 11, 2013: Bigger, better, faster, stronger: 0.7 is here!</h3>
+					<p>PPSSPP has once again improved by leaps and bounds, thanks to plenty of hard work from everyone involved! Compatibility has gone up dramatically, speed has increased drastically (especially on mobile) and everything is just better. There's even horizontal tilt control! Some newly playable games are God of War (very slow though, but this will probably be fixed in the near future), Virtua Tennis, Megaman: Maverick Hunter X, Saint Seiya and games like Ace Combat X go in game. Enjoy!<p>
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP 0.7!</a></p>
+
+          <h3>February 5, 2013: Development continues</h3>
+          <p>I'm not gonna give a date for 0.7, but just thought that I'd give an update. You can look forward to seeing increased compatibility, for example Exit and its sequel now work, and Wipeout now runs at the correct speed, and the emulator will run a bit faster in general as usual. Expect PPSSPP to keep getting faster over time for quite a while longer!</p>
+          <p>I said previously that 0.7 would have multithreading but I don't think it's worth the trouble yet, there are many easier things to speed up and improve first, so that will happen later. You will still get a noticable speed boost, even if it won't use all your cores.</p>
+
+					<h3>January 29, 2013: 0.6.1 - Snapdragon Conquered - JIT now works on all ARM Android devices</h3>
+					<p>Yeah, so I found the bug. Turns out that LDR r0, [r0] should be encoded as 0xE5900000, not 0xE4900000. If you don't know what that means, well, I can just tell you that the problem was very hard to find but very easy to fix once I found it.
+          <p><a href="downloads.html"><img src="img/ppsspp-icon.png" width="24" height="24">Download PPSSPP 0.6.1!</a></p>
+
+          <h3>January 27, 2013: PPSSPP 0.6 - faster and better!</h3>
+					<p>Alright, it's been a while so here's 0.6. It has a preliminary ARM JIT which greatly boosts speed on Android and other ARM platforms, and vertex caching which likewise improves performance quite a bit. Unfortunately I still haven't been able to fix a bug that causes the JIT not to work correctly on <strong>Snapdragon</strong> CPUs, instead it just crashes. I will fix this issue in an upcoming 0.61 release, stay tuned!<p>
+					<p>Also, a bunch of new games work but a couple have stopped working (like Mortal Kombat). These will be back, don't worry - it's what happens when emulators develop, sometimes when you fix things, things that worked "by accident" before breakxs until you fix another thing.</p>
+          <h3>January 14, 2013: Development builds, small progress report</h3>
+          <p>I have collaborated with Orphis to bring you development builds directly on the <a href="downloads.html">Downloads page</a>. In other news, things are progressing and even more games are starting to work, including the games I promised for 0.5 but didn't make it to the main branch (FF7CC, FF Type 0). ARMJIT is working on a few Androids but crashing on most, so there's still lots of work to be done before 0.6.</p>
+          <h3>January 4, 2013: PPSSPP 0.5: A small step for mankind, a huge step for PPSSPP!</h3>
+          <p>The last release was over a month ago, but believe me, it's been worth the wait! PPSSPP 0.5 brings large compatibility improvements, much better audio, many graphics fixes, savegames working in many games, and save states too! All of this available for both Android and Windows, with more ports coming soon.</p>
+          <p>In this release we also make available the PPSSPP Gold version, which is a paid version with a golden icon but otherwise identical to the main release. If you want to support the development of PPSSPP, a great way is to buy PPSSPP Gold. Currently only available for Android.</p>
+          <p>Now, stay tuned for v0.6, for which I have planned to write a dynarec (JIT) for ARM, which will improve speed on Android.</p>
+          <p><a href="downloads.html">Download PPSSPP 0.5 now!</a></p>
+          <h3>December 22, 2012: Not quite there yet, but 0.5 is coming</h3>
+          <p>PPSSPP is making very, very fast progress, new games are starting up daily but currently things are a bit unstable, many games that have worked have broken again. So, I'm planning to allow for a couple of more weeks of breakneck development and then a few days of stabilization before releasing a 0.5. If you're really impatient, you can build your own but it's quite shaky at the moment. But believe me, 0.5 will be worth the wait. Some things to look forward to:</p>
+          <ul>
+            <li>Some major games like Final Fantasy Crisis Core and Type-0, Armored Core 3 and Mortal Kombat: Unchained start and will be at least partly playable</li>
+            <li>Many more smaller games start and will be playable</li>
+            <li>3D graphics gets a large speed boost and several major fixes</li>
+            <li>Audio much improved, not perfect, but for example, Lumines plays and sounds great!</li>
+          </ul>
+          <p>If you're impatient, you can check out some cool screenshots in <a href="http://forums.ppsspp.org/showthread.php?tid=417">this thread</a> and elsewhere on the forum. Note that good-looking graphics doesn't mean it's fully playable, but it's always a step forward.</p>
+          <p>So stay tuned for 0.5 in January, and then later for 0.6 for which I have planned the really big speed boost which will take a lot of work - an ARM JIT - and then possibly multithreading in 0.7. Until then, merry christmas/channukah/festivus/holidays and a happy new year from the quickly growing PPSSPP team!</p>
+          <h3>December 1, 2012: v0.4 - Graphics improvements, compatibility improvements.</h3>
+          <p>Much improved graphics in several games, more games go ingame, more games go to title screen. The usual type of emulator progress :) See the <a href="downloads.html">downloads page</a> for the new version (Windows + Android, others are coming soon), and see some new compatible games at the compatibility list.</p>
+          <h3>November 20, 2012: v0.31: Many fixes, more games playable</h3>
+          <p>Progress has been rapid, much thanks to several new contributors! As usual, see the <a href="downloads.html">downloads page</a> for the new version, and look at the compatibility list.</p>
+          <h3>November 10, 2012: More progress, new release</h3>
+          <p>Version 0.2 has now been released! Quite a few more games show something at least. See the <a href="downloads.html">downloads page</a> and compatibility list.</p>
+          <h3>November 7, 2012: Progress and Blackberry Port</h3>
+          <p>Some progress has been made, PPSSPP can now decrypt games, a few more games reach the title screen etc. There's no new APK release yet. However the big news is that PPSSPP has been successfully ported to Blackberry 10 by xsacha, here's a <a href="http://www.youtube.com/watch?v=CdUL1DalYrw">a video of PPSSPP running on a Dev Alpha device</a>. It can be downloaded on the <a href="downloads.html">downloads page</a>.</p>
+          <h3>November 1, 2012: PPSSPP has been open sourced!</h3>
+          <p>And ppsspp.org has been launched!</p>
+          <p>Discuss this new emulator in the brand new <a href="http://forums.ppsspp.org/">PPSSPP forums</a>! (check your spam folder for the confirmation mail when you register)</p>
+        
+        </div>
+      </div>
+
+      <hr>
+      <p>Also check out <a href="http://dolphin-emu.org">Dolphin Emulator</a>, the world's top Wii and Gamecube emulator, co-founded by the same author.</p>
+      
+      <hr>
+
+      <footer>
+      <p>&copy; PPSSPP project 2012. PSP is a trademark of Sony, Inc.</p>
+      <small>Portions of this page are reproduced from work created and shared by the Android Open Source Project and used according to terms described in the Creative Commons 2.5 Attribution License.</small> <!-- for the android logo -->
+      </footer>
+
+    </div> <!-- /container -->
+<?php include("footer.php"); ?>
