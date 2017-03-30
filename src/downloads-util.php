@@ -1,7 +1,11 @@
 <?php
 
 function get_version_links($filename) {
-  $handle = opendir("../pub/files");
+	$filedir = "../pub/files";
+	$handle = null;
+	if (file_exists($filedir)) {
+		$handle = opendir($filedir);
+	}
 
   $dirs = array();
 
