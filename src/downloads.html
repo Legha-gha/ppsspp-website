@@ -80,8 +80,9 @@ include("header.php");
 				<div class="span8">
 					<h2>PPSSPP for Windows</h2>
 					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
-          <p>Download the ZIP file and unpack it where you like. Installers are coming soon.</p>
-          <p><strong>NOTE!</strong> 0.9.7-0.9.9.1 require a new version of the VC runtime from Microsoft (1.0 has removed this requirement): <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">VC 2013 runtime</a></p>
+          <p>Download the ZIP file and unpack it where you like, or download an installer.</p>
+          <!--
+          <p><strong>NOTE!</strong> 0.9.7-0.9.9.1 require a new version of the VC runtime from Microsoft (1.0 has removed this requirement): <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">VC 2013 runtime</a></p>-->
 				</div>
 				<div class="span4">
           <?php
@@ -99,7 +100,7 @@ include("header.php");
           ?>
           <?php
              $first = true;
-             foreach (array_slice(get_version_links("PPSSPPSetup.zip"), 0, 4) as $v) {
+             foreach (array_slice(get_version_links("PPSSPPSetup.exe"), 0, 4) as $v) {
                 echo "<p><a ";
                 if ($first)
                   echo 'class="btn btn-primary btn-large" ';
@@ -118,7 +119,7 @@ include("header.php");
 					<h2>PPSSPP Gold for Windows</h2>
 					<img src="img/ppsspp-icon-gold.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
           <p>Do you want to support the development of PPSSPP? Buy the Gold version of PPSSPP for Windows!</p>
-          <p>NOTE: Currently temporarily unavailable.</p>
+          <p>NOTE: Temporarily unavailable - to support the project, buy the Android version.</p>
 				</div>
 				<div class="span4">
 					<p><a class="btn btn-warning btn-large" href="http://central.ppsspp.org/buygold"><img src="img/windows-36.png" height="36px">&nbsp;Buy PPSSPP Gold</a>&nbsp;</p>

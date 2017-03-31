@@ -123,18 +123,19 @@ include("header.php");
         <div class="span12" id="news">
           <h2>News</h2>
           <a name="news"></a>
-          <h3>September 17, 2016: PPSSPP 1.3 is here!</h3>
-          <p>Half a year's worth of fixes in one go, enjoy! Here's a selection of the most important fixes: </p>
+          <h3>March 31, 2017: PPSSPP 1.4 has arrived!</h3>
           <ul>
-            <li>Fix JIT problems on Galaxy S7 and iOS 9+ devices</li>
-            <li>Fix Android TV support (x86-64) and use latest FFmpeg, fix Raspberry memory use</li>
-            <li>Texture replacement support - for custom textures and upscaling</li>
-            <li>Workaround rendering issues on Tegra K1/X1</li>
-            <li>Initial Vulkan support on Windows - not full featured yet</li>
-            <li>Experimental new CPU backend and CPU fixes</li>
-            <li>Fix type D cheat codes, allow for homebrew</li>
-            <li>Fix some problems when switching away from and back to the app</li>
-            <li>Initial game video recording / TAS features (frame stepping)</li>
+            <li>Support D3D11 (performs better than OpenGL or D3D9 on most hardware)
+            <li>Audio quality improvement (linear interpolation) (#8950)
+            <li>Hardware spline/bezier tesselation in OpenGL, D3D11 and Vulkan (...)
+            <li>Post-processing shaders in D3D11
+            <li>Prescale UV setting removed, now the default (improves perf) (#9176)
+            <li>High DPI display fixes
+            <li>Various fixes for UMD switching for multi-UMD games (#9245, #9256)
+            <li>New audio setting to improve compatibility with Bluetooth headsets
+            <li>Various desktop gamepad compatibility fixes
+            <li>Workaround for mipmap issue, fixing fonts in Tactics Ogre Japanese
+            <li>Assorted minor compatibility fixes, code cleanup and performance improvements
           </ul>
           <p><a href="downloads.html"><img alt="PPSSPP icon" src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP <?php echo $current_version; ?>!</a></p>
 					<p><img alt="PPSSPP Gold icon" src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="http://central.ppsspp.org/buygold"> Buy PPSSPP Gold <?php echo $current_version; ?>!</a>
