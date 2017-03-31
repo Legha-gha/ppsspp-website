@@ -12,7 +12,10 @@ function get_version_links($filename) {
   if ($handle) {
     while (false !== ($entry = readdir($handle))) {
       if (strpos($entry, "_") !== false && strpos($entry, ".") === false) {
-        array_push($dirs, $entry);
+        if (file_exists("$filedir/$entry/$filename")) {
+          # Don't add empty directories
+          array_push($dirs, $entry);
+        }
       }
     }
 
