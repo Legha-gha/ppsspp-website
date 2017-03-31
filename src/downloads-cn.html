@@ -83,19 +83,6 @@ include("header.php");
                 $first = false;
              }
           ?>
-          <?php
-             $first = true;
-             foreach (array_slice(get_version_links("PPSSPPSetup.exe"), 0, 4) as $v) {
-                echo "<p><a ";
-                if ($first)
-                  echo 'class="btn btn-primary btn-large" ';
-                $first = false;
-                echo 'href="' . $v["href"] . '">';
-                if ($first)
-                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
-                echo '下载 ' . $v["version"] . " Installer</a></p>\n";
-             }
-          ?>
 				</div>
 			</div>
 			<hr>
@@ -117,6 +104,19 @@ include("header.php");
                 if ($first)
                   echo '<img src="img/windows-36.png" height="36px">&nbsp;';
                 echo '下载 ' . $v["version"] . "版 ZIP</a></p>\n";
+             }
+          ?>
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("PPSSPPSetup.exe"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                $first = false;
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
+                echo '下载 ' . $v["version"] . " Installer</a></p>\n";
              }
           ?>
 				</div>
