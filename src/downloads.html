@@ -97,6 +97,19 @@ include("header.php");
                 echo 'Download ' . $v["version"] . " zip</a></p>\n";
              }
           ?>
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("PPSSPPSetup.zip"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                $first = false;
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
+                echo 'Download ' . $v["version"] . " Installer</a></p>\n";
+             }
+          ?>
 				</div>
       </div>
       <hr/>
