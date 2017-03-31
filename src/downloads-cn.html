@@ -83,6 +83,19 @@ include("header.php");
                 $first = false;
              }
           ?>
+          <?php
+             $first = true;
+             foreach (array_slice(get_version_links("PPSSPPSetup.exe"), 0, 4) as $v) {
+                echo "<p><a ";
+                if ($first)
+                  echo 'class="btn btn-primary btn-large" ';
+                $first = false;
+                echo 'href="' . $v["href"] . '">';
+                if ($first)
+                  echo '<img src="img/windows-36.png" height="36px">&nbsp;';
+                echo '下载 ' . $v["version"] . " Installer</a></p>\n";
+             }
+          ?>
 				</div>
 			</div>
 			<hr>
@@ -91,9 +104,6 @@ include("header.php");
 					<h2>Windows版PPSSPP  </h2>
 					<img src="img/ppsspp-icon.png" style="width: 72px; height: 72px; float:left; padding-right: 10px">
           <p>下载并运行安装器, 或者下载zip包并解压到你喜欢的地方。</p>
-          <p><strong>注意!</strong> 0.9.7以及更高版本需要微软新版VC运行库 :
-          </p>
-          <p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">VC运行库 2013 (必需!)</a></p>
 				</div>
 				<div class="span4">
           <?php
