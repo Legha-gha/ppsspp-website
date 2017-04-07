@@ -28,7 +28,8 @@ PAGES=\
 TEMPLATES=\
 	header.php \
 	footer.php \
-	downloads-util.php
+	downloads-util.php \
+	blog/*
 
 PREFIX=../pub
 

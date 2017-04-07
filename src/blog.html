@@ -4,12 +4,54 @@ $pagelang = 'en';
 $navsel = 'blog.html';
 include("header.php");
 include("parsedown.php");
+
+function read_blog() {
+	$filedir = "blog";
+	$handle = null;
+	if (file_exists($filedir)) {
+		$handle = opendir($filedir);
+	}
+
+	$posts = array();
+	if ($handle) {
+		while (false !== ($entry = readdir($handle))) {
+			if (strpos($entry, ".") != 0) {
+				// Don't add empty directories
+				array_push($posts, $entry);
+			}
+		}
+		closedir($handle);
+	} else {
+		return array();
+	}
+
+	rsort($posts);
+	$Parsedown = new Parsedown();
+	foreach ($posts as $post) {
+		$file = fopen($filedir . "/" . $post, "r");
+		if (!$file)
+			continue;
+
+		$parts = explode("_", $post, 2);
+		$date = $parts[0];
+		$url = $parts[1];
+		$title = fgets($file);
+		$md = "";
+		while (!feof($file)) {
+			$md = $md . fgets($file);
+		}
+		echo "<h2>$title</h2>\n";
+		echo "<p><small>$date</small></p>\n";
+		echo $Parsedown->text($md);
+	}
+}
+
 ?>
 
 <div class="container">
 	<div class="row">
 		<div class="span12">
-			<h1>PPSSPP Blog</h1>
+			<?php read_blog(); ?>
 		</div>
 	</div>
 </div>
