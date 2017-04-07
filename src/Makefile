@@ -4,6 +4,8 @@
 PAGES=\
 	./404.html \
 	./at3plusdecoder.html \
+	./blog-cn.html \
+	./blog.html \
 	./contact-cn.html \
 	./contact.html \
 	./development.html \

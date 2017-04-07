@@ -1,5 +1,12 @@
-<!-- footer -->
-	  <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+		<!-- footer -->
+		<div class="container">
+			<hr>
+			<footer>
+				<p>&copy; PPSSPP Project 2012-2017. PSP is a trademark of Sony, Inc.</p>
+			</footer>
+		</div> <!-- /container -->
+
+		<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="js/bjqs-1.3.min.js"></script>
 

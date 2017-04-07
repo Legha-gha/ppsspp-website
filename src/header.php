@@ -1,11 +1,12 @@
 <?php
 $strongnav = "http://forums.ppsspp.org/";
 if ($pagelang == 'cn') {
-  $description = "安卓,ios,pc, Linux, MacOSX, 黑莓, 塞班psp模拟器";
+  $description = "PPSSPP: 安卓, iOS, PC, Linux, MacOSX, 黑莓, 塞班psp模拟器";
   $navstyle = "style=\"font-family:'微软雅黑'\"";
   $navitems = array(
     "首页" => "index-cn.html",
     "下载" => "downloads-cn.html",
+		// "Blog" => "blog-cn.html",
     "截图 &amp; 视频" => "screenshots-cn.html",
     "导航 &amp; 帮助" => "guides-cn.html",
     "论坛" => "http://forums.ppsspp.org/",
@@ -13,16 +14,17 @@ if ($pagelang == 'cn') {
     "English" => "index.html",
   );
 } else {
-  $description = "PSP emulator for Android, Windows, Linux, iOS, MacOSX";
+  $description = "PPSSPP - PSP emulator for Android, Windows, Linux, iOS, MacOSX";
   $navstyle = "";
   $navitems = array(
-   "Home" => "index.html",
-   "Downloads" => "downloads.html",
-   "Screens &amp; Video" => "screenshots.html",
-   "Guides &amp; Help" => "guides.html",
-   "Forums" => "http://forums.ppsspp.org/",
-   "Contact" => "contact.html",
-   "中文" => "index-cn.html",
+		"Home" => "index.html",
+		"Downloads" => "downloads.html",
+		// "Blog" => "blog.html",
+    "Screens &amp; Video" => "screenshots.html",
+    "Guides &amp; Help" => "guides.html",
+    "Forums" => "http://forums.ppsspp.org/",
+    "Contact" => "contact.html",
+    "中文" => "index-cn.html",
   );
 }
 ?>
