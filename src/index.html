@@ -5,7 +5,11 @@ $navsel = "index.html";
 
 include("downloads-util.php");
 $versions = get_version_links("ppsspp_win.zip");
-$current_version = $versions[0]["version"];
+if (array_key_exists(0, $versions)) {
+  $current_version = $versions[0]["version"];
+} else {
+  $current_version = "1.0";
+}
 
 include("header.php");
 ?>

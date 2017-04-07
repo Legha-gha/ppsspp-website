@@ -21,7 +21,7 @@ function get_version_links($filename) {
 
     closedir($handle);
   } else {
-    echo "Failed";
+    return array();
   }
 
   rsort($dirs);
