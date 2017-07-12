@@ -1,5 +1,5 @@
 <?php
-$strongnav = "http://forums.ppsspp.org/";
+$strongnav = "https://forums.ppsspp.org/";
 if ($pagelang == 'cn') {
   $description = "PPSSPP: 安卓, iOS, PC, Linux, MacOSX, 黑莓, 塞班psp模拟器";
   $navstyle = "style=\"font-family:'微软雅黑'\"";
@@ -9,7 +9,7 @@ if ($pagelang == 'cn') {
 		// "Blog" => "blog-cn.html",
     "截图 &amp; 视频" => "screenshots-cn.html",
     "导航 &amp; 帮助" => "guides-cn.html",
-    "论坛" => "http://forums.ppsspp.org/",
+    "论坛" => "https://forums.ppsspp.org/",
     "联系我们" => "contact-cn.html",
     "English" => "index.html",
   );
@@ -22,7 +22,7 @@ if ($pagelang == 'cn') {
 		// "Blog" => "blog.html",
     "Screens &amp; Video" => "screenshots.html",
     "Guides &amp; Help" => "guides.html",
-    "Forums" => "http://forums.ppsspp.org/",
+    "Forums" => "https://forums.ppsspp.org/",
     "Contact" => "contact.html",
     "中文" => "index-cn.html",
   );

@@ -26,7 +26,7 @@ include("header.php");
       <div class="row">
         <div class="span12">
 					<h2>Where can I get games for PPSSPP?</h2>
-          <p>You need to convert your PSP games into ISO files or CSO files. To legally turn your own PSP games into .ISO files, you need to install "Custom Firmware" on your PSP. Google for that. Then follow these steps:</p>
+          <p>You need to have your PSP games as .CSO or .ISO files. I do not have the right to distribute those, so you'll have to get them on your own. The best way is to convert your real PSP games. To do this, you need to install "Custom Firmware" on your PSP. Google for that. Then follow these steps:</p>
           <ul>
             <li>Insert the UMD into your PSP.</li>
             <li>Connect your PSP to your PC with a USB cable.</li>
@@ -35,68 +35,53 @@ include("header.php");
             <li>On your PC, a folder will pop up, containing a virtual ISO file. To copy the game to your PC, simply drag this to somewhere on your harddrive and the copy will start. Done!</li>
           </ul>
 
-          <p>There are also tools to turn ISO files into CSO (compressed ISO) files to save space.</p>
-          <p>If you have digital downloads on your PSP, they can be used directly on PPSSPP. Just copy the EBOOT.PBP over. Note that this has not been tested as much as ISO loading so there may still be issues with some games.</p>
+          <p>There are tools to turn ISO files into CSO (compressed ISO) files to save space.</p>
+          <p>If you have digital downloads on your real PSP, they can be used directly on PPSSPP. Just copy the EBOOT.PBP over. Note that this has not been tested as much as ISO loading so there may still be issues with some games.</p>
 
           <h2>PPSSPP is awesome! How do I donate to the project?</h2>
-          <p>Buy <a href="http://central.ppsspp.org/buygold">PPSSPP Gold</a>! Available for Android only currently.
-          It's the same as the regular version functionally (see <a href="http://central.ppsspp.org/whygold">Why Gold?</a>), but by buying it you support the development of PPSSPP.</p>
-
-          <h2>What does this option do?</h2>
-          <p>PPSSPP has lots of options. All of them improve some game for someone, otherwise they would have been deleted by now - I try to keep the number of options sane at least.</p>
+          <p>Buy <a href="https://central.ppsspp.org/buygold">PPSSPP Gold</a>! Available for Android only currently.
+          It's the same as the regular version functionally (see <a href="https://central.ppsspp.org/whygold">Why Gold?</a>), but by buying it you support the development of PPSSPP.</p>
 
           <h2>Where can I get PPSSPP for iOS?</h2>
-          <p>You need a jailbroken iOS device, running iOS 6 up to 8.x. See the <a href="/downloads.html">Downloads page</a> for more info. Also does run on iOS 9 but note that the JIT does not function on 64-bit iOS 9 devices due to enhanced protection by Apple, which means that it runs at very slow speed.</p>
+          <p>You need a jailbroken iOS device, running iOS 6 up to 10.x. See the <a href="/downloads.html">Downloads page</a> for more info. Note that the JIT does not currently function on 64-bit iOS builds - this will be fixed in the future though.</p>
           
           <h2>What is the JIT?</h2>
-          <p>To emulate advanced systems like the PSP fast, the emulator needs to translate the machine code language of the PSP to the machine code language of your PC or mobile device at runtime. This is done with a <strong>"Just-In-Time recompiler"</strong> or JIT, also known as a Dynarec. PPSSPP has JITs for x86 and ARM.</p>
-          <p>For a JIT to function, an app needs to have the ability to generate machine code at runtime. This is allowed on Windows, Mac, Linux and Android, while it is completely disallowed on non-jailbroken iOS and on App Store Mac apps, and on Windows Phone 8.</p>
-
-          <h2>Do I need a BIOS file to run PPSSPP, like with PSX emulators?</h2>
-          <p>No. PPSSPP simulates the BIOS (not really a BIOS on the PSP, more like an internal OS).</p>
+          <p>To emulate advanced systems like the PSP fast, the emulator needs to translate the machine code language of the PSP to the machine code language of your PC or mobile device at runtime. This is done with a <strong>"Just-In-Time recompiler"</strong> or JIT, also known as a Dynarec. PPSSPP has JITs for x86 and ARM, 32-bit and 64-bit.</p>
+          <p>For a JIT to function, an app needs to have the ability to generate machine code at runtime. This is allowed on Windows, Mac, Linux and Android, while it is completely disallowed on non-jailbroken iOS and on App Store Mac apps, and on Windows Phone 8. It's possible on Windows Phone 10 but it has a deficiency making it very unreliable on ARM.</p>
 
           <h2>How do I install game DLC?</h2>
           <p>Install it exactly the same way as you would on a PSP, that is, copy the files to PSP/GAME or PSP/SAVEDATA (depending on the DLC) on the memory stick. In the Android version of PPSSPP, the memory stick is simply the SD card or USB storage of your phone, PPSSPP will create a PSP folder in the root of that. On Windows without installer, the memory stick is the "memstick" subdirectory in the PPSSPP folder. On iOS, it's in /User/Documents/PSP/ . On Mac and Linux, it's in ~/.config/PPSSPP.</p>
 
-          <a name="winphone"></a>
-          <h2>Why is PPSSPP not available for Windows Phone?</h2>
-          <p>Windows Phone is, like non-jailbroken iOS, a very restrictive environment where apps are not allowed to generate code at runtime. This prevents the JIT to work, which means that even if we ported the emulator, it would run very slow. Windows Phone 10 may have a way around this, but this is still to be investigated.</p>
-          <p>Also, OpenGL is not available on Windows Phone, making porting a big project which isn't worth it because of the low possible speed we can get.<p>
-          <p>In addition, I don't have a Windows Phone device.</p>
-
           <a name="vita"></a>
           <h2>Will PPSSPP be able to emulate the PSP Vita in the future?</h2>
-          <p>PSP Vita is a completely different platform and it's still fairly secure, meaning that there's no way to decrypt games, making any emulation attempt impossible unless this changes. Also, it's far more powerful so emulating it at full speed on an Android phone is years off anyway.</p>
+          <p>No. PSP Vita is a completely different machine, far more powerful than the PSP and with different security technologies. I don't have neither the information needed nor the time.</p>
+
+          <h2>Do I need a BIOS file to run PPSSPP, like with PSX emulators?</h2>
+          <p>No. PPSSPP simulates the BIOS (not really a BIOS on the PSP, more like an internal OS).</p>
 
 					<h2>Why is PPSSPP so <strong>fast</strong>?</h2>
 					<p>You're probably a Windows user. Because x86 CPUs are damn fast, PC GPU drivers are good, we have a fairly advanced x86 JIT, it's written in C++ and I rock.</p>
 
 					<h2>Why is PPSSPP so <strong>slow</strong>?</h2>
-          <p>You probably run PPSSPP on a mobile device. These devices usually have very poor OpenGL ES drivers, although the situation is improving. PSP games do things that are not friendly to modern GPUs so good drivers really help. The CPU emulation through JIT is now fast enough that it usually is not the bottleneck.</p>
+          <p>You probably run PPSSPP on a mobile device. These devices, especially older ones, often have very poor OpenGL ES drivers, although the situation is improving. Some newer devices now have Vulkan support, which helps. The CPU emulation through JIT is now fast enough that it usually is not the bottleneck.</p>
 
           <h2>Why is the emulator called PPSSPP?</h2>
-          <p>Why not? And the domain name was available.</p>
-
-          <h2>msvcp120.dll is missing!</h2>
-          <p>Please download and install the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">2013 C++ runtime</a>. This will only happen with older versions of the emulator, from 1.0 and onwards these files are not needed.</p>
+          <p>Why not? The domain name ppsspp.org was available.</p>
 
           <h2>If I buy PPSSPP Gold for Android, can I also download PPSSPP Gold for PC?</h2>
           <p>Unfortunately there is no way to get information about Android app purchases, so I can't pre-approve email addresses or something like that. But feel free to use the free PC version indefinitely.</p>
 
-          <h2>The Windows version doesn't start!</h2>
-          <p>Try installing the latest drivers for your graphics card. Make sure you are running at least XP, 2000 or earlier will not work. The 64-bit build only runs on 64-bit Windows.</p>
-
           <h2>Can I use my gamepad to control PPSSPP?</h2>
-          <p>PPSSPP has built-in XInput and DirectInput support on Windows so it will "just work" with any Xbox 360 pad and most other pads that you plug into your PC.<br>On Android, many gamepads like Ouya's pad or Moga work just fine, sometimes with a few limitations. One remaining problem is that the Xperia Play buttons will work but not the touch sticks, for technical reasons.</p>
+          <p>Yes, PPSSPP has built-in XInput and DirectInput support on Windows so it will "just work" with any Xbox 360 pad and most other pads that you plug into your PC.<br>On Android, many gamepads like Ouya's pad or Moga work just fine, sometimes with a few limitations. One remaining problem is that the Xperia Play buttons will work but not the touch sticks, for technical reasons.</p>
 
           <h2>What are the PC CPU and GPU requirements?</h2>
-          <p>Any reasonably modern CPU will be just fine, and any GPU that can handle OpenGL 2.0 should have no issues. You should make sure to install the latest graphics drivers available though. Windows XP or later is required, Windows 7 or 8 is recommended. On some older computers, you may need to use the DirectX backend.</p>
+          <p>Any reasonably modern CPU will be just fine, and any GPU that can handle OpenGL 2.0 should have no issues. You should make sure to install the latest graphics drivers available though. Windows XP or later is required, Windows 7 or 8 is recommended. Vulkan can help performance where available, also try D3D9 or D3D11 if OpenGL is slow by changing the backend in settings. On some older computers, you may need to use the DirectX backend.</p>
 
           <h2>Where are the "git" versions everyone is talking about in the forum?</h2>
           <p><a href="downloads.html#devbuilds">Here</a>.</p>
 
 					<h2>What are CSO files?</h2>
-          <p>CSO are compressed ISO files that can be played directly, decompressing on the fly. Very useful to save space on your Android device, for example. <a href="http://www.github.com/unknownbrackets/maxcso/releases">MaxCSO</a> is a great program to create CSO files. Of course, there are others around the web, too.</p>
+          <p>CSO are compressed ISO files that can be played directly, decompressing on the fly. Very useful to save space on your Android device, for example. <a href="https://www.github.com/unknownbrackets/maxcso/releases">MaxCSO</a> is a great program to create CSO files. Of course, there are others around the web, too.</p>
 
           <h2>I've managed to fix a bug, how do I get the fix into PPSSPP?</h2>
 					<p>If you know GitHub, you know the drill - just make a pull request with the changes, in a clone of the <a href="development.html">PPSSPP repository</a>. If you don't know Git(Hub), feel free to <a href="contact.html">ask for help</a>.
@@ -104,20 +89,6 @@ include("header.php");
           <h2>My favorite game doesn't work in PPSSPP. What can I do?</h2>
           <p>You can either <a href="development.html">help out with fixing it</a>, or wait until someone does.
 
-					<h2>The Windows version won't run, missing XInput.dll</h2>
-					<p>Install DirectX.</p>
-
-          <a name="save"></a>
-          <h2>My save states won't load!</h2>
-          <p>Save states are tricky in an emulator that's not fully completed yet, as we haven't found all the state we need to save. Before 0.9.5, we would just copy all the state straight to an unstructured file. As the amount of state differed between the versions, no two were really compatible. From 0.9.5 and forwards, we have created a structured format where we can add new sections as needed.</p>
-
-          <p>So currently it's like this:</p>
-          <ul>
-            <li>States from versions before 0.9.5 will never load in a later version</li>
-            <li>States from 0.9.5 and onwards WILL (in most cases) load in future versions!</li>
-          </ul>
-
-          <p>That means that your 0.9.1 save states is stuck on 0.9.1, unfortunately. Use real saves to work around that.</p>
         </div>
       </div>
     </div> <!-- /container -->
