@@ -23,7 +23,8 @@ PAGES=\
 	./index.html \
 	./index_more.html \
 	./screenshots-cn.html \
-	./screenshots.html
+	./screenshots.html \
+	./privacy.html
 
 TEMPLATES=\
 	header.php \

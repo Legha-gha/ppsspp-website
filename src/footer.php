@@ -2,7 +2,8 @@
 		<div class="container">
 			<hr>
 			<footer>
-				<p>&copy; PPSSPP Project 2012-2017. PSP is a trademark of Sony, Inc.</p>
+        <p>&copy; PPSSPP Project 2012-2017. PSP is a trademark of Sony, Inc.</p>
+        <p><a href="/privacy.html">Privacy Policy</a></p>
 			</footer>
 		</div> <!-- /container -->
 
