@@ -42,13 +42,12 @@ include("header.php");
           <p>Buy <a href="https://central.ppsspp.org/buygold">PPSSPP Gold</a>! Available for Android only currently.
           It's the same as the regular version functionally (see <a href="https://central.ppsspp.org/whygold">Why Gold?</a>), but by buying it you support the development of PPSSPP.</p>
 
+          <h2>PPSSPP doesn't start on my Android device. What can I do?</h2>
+          <p>It may be that you switched the graphics backend to Vulkan, and there might be some devices out there with broken support for this brand new graphics API. If you're stuck in this situation, delete the file /PSP/SYSTEM/ppsspp.ini, or open it in a <a href="https://play.google.com/store/apps/details?id=com.rhmsoft.edit&hl=en">text editor</a> and change GPUBackend to 0.</p>
+          
           <h2>Where can I get PPSSPP for iOS?</h2>
           <p>You need a jailbroken iOS device, running iOS 6 up to 10.x. See the <a href="/downloads.html">Downloads page</a> for more info. Note that the JIT does not currently function on 64-bit iOS builds - this will be fixed in the future though.</p>
           
-          <h2>What is the JIT?</h2>
-          <p>To emulate advanced systems like the PSP fast, the emulator needs to translate the machine code language of the PSP to the machine code language of your PC or mobile device at runtime. This is done with a <strong>"Just-In-Time recompiler"</strong> or JIT, also known as a Dynarec. PPSSPP has JITs for x86 and ARM, 32-bit and 64-bit.</p>
-          <p>For a JIT to function, an app needs to have the ability to generate machine code at runtime. This is allowed on Windows, Mac, Linux and Android, while it is completely disallowed on non-jailbroken iOS and on App Store Mac apps, and on Windows Phone 8. It's possible on Windows Phone 10 but it has a deficiency making it very unreliable on ARM.</p>
-
           <h2>How do I install game DLC?</h2>
           <p>Install it exactly the same way as you would on a PSP, that is, copy the files to PSP/GAME or PSP/SAVEDATA (depending on the DLC) on the memory stick. In the Android version of PPSSPP, the memory stick is simply the SD card or USB storage of your phone, PPSSPP will create a PSP folder in the root of that. On Windows without installer, the memory stick is the "memstick" subdirectory in the PPSSPP folder. On iOS, it's in /User/Documents/PSP/ . On Mac and Linux, it's in ~/.config/PPSSPP.</p>
 
@@ -56,7 +55,7 @@ include("header.php");
           <h2>Will PPSSPP be able to emulate the PSP Vita in the future?</h2>
           <p>No. PSP Vita is a completely different machine, far more powerful than the PSP and with different security technologies. I don't have neither the information needed nor the time.</p>
 
-          <h2>Do I need a BIOS file to run PPSSPP, like with PSX emulators?</h2>
+          <h2>Do I need a BIOS file to run PPSSPP, like with PSX and PS2 emulators?</h2>
           <p>No. PPSSPP simulates the BIOS (not really a BIOS on the PSP, more like an internal OS).</p>
 
 					<h2>Why is PPSSPP so <strong>fast</strong>?</h2>
@@ -75,7 +74,7 @@ include("header.php");
           <p>Yes, PPSSPP has built-in XInput and DirectInput support on Windows so it will "just work" with any Xbox 360 pad and most other pads that you plug into your PC.<br>On Android, many gamepads like Ouya's pad or Moga work just fine, sometimes with a few limitations. One remaining problem is that the Xperia Play buttons will work but not the touch sticks, for technical reasons.</p>
 
           <h2>What are the PC CPU and GPU requirements?</h2>
-          <p>Any reasonably modern CPU will be just fine, and any GPU that can handle OpenGL 2.0 should have no issues. You should make sure to install the latest graphics drivers available though. Windows XP or later is required, Windows 7 or 8 is recommended. Vulkan can help performance where available, also try D3D9 or D3D11 if OpenGL is slow by changing the backend in settings. On some older computers, you may need to use the DirectX backend.</p>
+          <p>Any reasonably modern CPU will be just fine, and any GPU that can handle OpenGL 2.0 should have no issues. You should make sure to install the latest graphics drivers available though. Windows XP or later is required, Windows 7 or 8 is recommended. Vulkan will help performance where available, also try D3D9 or D3D11 if OpenGL is slow by changing the backend in settings. On some older computers, you may need to use the D3D9 backend.</p>
 
           <h2>Where are the "git" versions everyone is talking about in the forum?</h2>
           <p><a href="downloads.html#devbuilds">Here</a>.</p>
@@ -88,6 +87,11 @@ include("header.php");
 
           <h2>My favorite game doesn't work in PPSSPP. What can I do?</h2>
           <p>You can either <a href="development.html">help out with fixing it</a>, or wait until someone does.
+
+          <h2>What is the JIT and why can't we use it on iOS?</h2>
+          <p>To emulate advanced systems like the PSP fast, the emulator needs to translate the machine code language of the PSP to the machine code language of your PC or mobile device at runtime. This is done with a <strong>"Just-In-Time recompiler"</strong> or JIT, also known as a Dynarec. PPSSPP has JITs for x86 and ARM, 32-bit and 64-bit.</p>
+          <p>For a JIT to function, an app needs to have the ability to generate machine code at runtime. This is allowed on Windows, Mac, Linux and Android, while it is completely disallowed on non-jailbroken iOS and on App Store Mac apps, and on Windows Phone 8. It's almost possible on Windows Phone 10 but the OS has a deficiency making it very unstable on ARM (missing support for FlushInstructionCache()).</p>
+
 
         </div>
       </div>
