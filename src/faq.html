@@ -25,22 +25,18 @@ include("header.php");
       </div>
       <div class="row">
         <div class="span12">
-					<h2>Where can I get games for PPSSPP?</h2>
-          <p>You need to have your PSP games as .CSO or .ISO files. I do not have the right to distribute those, so you'll have to get them on your own. The best way is to convert your real PSP games. To do this, you need to install "Custom Firmware" on your PSP. Google for that. Then follow these steps:</p>
+					<h2>How can I run my PSP games in PPSSPP?</h2>
+          <p>You need to have your PSP games as .CSO or .ISO files. I do not have the right to distribute those with the app, so you'll have to provide them on your own. To convert your real PSP games for use with PPSSPP, you need to install a "Custom Firmware" on your PSP. Google for that. Then follow these steps:</p>
           <ul>
             <li>Insert the UMD into your PSP.</li>
             <li>Connect your PSP to your PC with a USB cable.</li>
-            <li>At the PSP menu, press Select. In the menu that pops up (only on Custom Firmware), choose to UMD as USB Device.</li>
+            <li>At the PSP main menu, press Select. In the menu that pops up (only on Custom Firmware), choose to UMD as USB Device.</li>
             <li>Still in the PSP menu, choose USB Connection in the Settings menu (to the left).</li>
             <li>On your PC, a folder will pop up, containing a virtual ISO file. To copy the game to your PC, simply drag this to somewhere on your harddrive and the copy will start. Done!</li>
           </ul>
 
-          <p>There are tools to turn ISO files into CSO (compressed ISO) files to save space.</p>
+          <p>There are tools to turn ISO files into CSO (compressed ISO) files to save space, such as maxcso by [Unknown].</p>
           <p>If you have digital downloads on your real PSP, they can be used directly on PPSSPP. Just copy the EBOOT.PBP over. Note that this has not been tested as much as ISO loading so there may still be issues with some games.</p>
-
-          <h2>PPSSPP is awesome! How do I donate to the project?</h2>
-          <p>Buy <a href="https://central.ppsspp.org/buygold">PPSSPP Gold</a>! Available for Android only currently.
-          It's the same as the regular version functionally (see <a href="https://central.ppsspp.org/whygold">Why Gold?</a>), but by buying it you support the development of PPSSPP.</p>
 
           <h2>PPSSPP doesn't start on my Android device. What can I do?</h2>
           <p>It may be that you switched the graphics backend to Vulkan, and there might be some devices out there with broken support for this brand new graphics API. If you're stuck in this situation, delete the file /PSP/SYSTEM/ppsspp.ini, or open it in a <a href="https://play.google.com/store/apps/details?id=com.rhmsoft.edit&hl=en">text editor</a> and change GPUBackend to 0.</p>
@@ -51,21 +47,22 @@ include("header.php");
           <h2>How do I install game DLC?</h2>
           <p>Install it exactly the same way as you would on a PSP, that is, copy the files to PSP/GAME or PSP/SAVEDATA (depending on the DLC) on the memory stick. In the Android version of PPSSPP, the memory stick is simply the SD card or USB storage of your phone, PPSSPP will create a PSP folder in the root of that. On Windows without installer, the memory stick is the "memstick" subdirectory in the PPSSPP folder. On iOS, it's in /User/Documents/PSP/ . On Mac and Linux, it's in ~/.config/PPSSPP.</p>
 
+          <h2>PPSSPP is awesome! How do I donate to the project?</h2>
+          <p>Buy <a href="https://central.ppsspp.org/buygold">PPSSPP Gold</a>! Available for Android and PC.
+          It's the same as the regular version functionally (see <a href="https://central.ppsspp.org/whygold">Why Gold?</a>), but by buying it you support the development of PPSSPP.</p>
+
           <a name="vita"></a>
           <h2>Will PPSSPP be able to emulate the PSP Vita in the future?</h2>
           <p>No. PSP Vita is a completely different machine, far more powerful than the PSP and with different security technologies. I don't have neither the information needed nor the time.</p>
 
           <h2>Do I need a BIOS file to run PPSSPP, like with PSX and PS2 emulators?</h2>
-          <p>No. PPSSPP simulates the BIOS (not really a BIOS on the PSP, more like an internal OS).</p>
+          <p>No. PPSSPP simulates the BIOS and the internal OS. It does not currently emulate enough of the hardware for the actual PSP operating system to run, so even if you have a copy of it, PPSSPP can't run it.</p>
 
-					<h2>Why is PPSSPP so <strong>fast</strong>?</h2>
-					<p>You're probably a Windows user. Because x86 CPUs are damn fast, PC GPU drivers are good, we have a fairly advanced x86 JIT, it's written in C++ and I rock.</p>
-
-					<h2>Why is PPSSPP so <strong>slow</strong>?</h2>
-          <p>You probably run PPSSPP on a mobile device. These devices, especially older ones, often have very poor OpenGL ES drivers, although the situation is improving. Some newer devices now have Vulkan support, which helps. The CPU emulation through JIT is now fast enough that it usually is not the bottleneck.</p>
+					<h2>Why is PPSSPP so <strong>slow</strong> on my device?</h2>
+          <p>You probably run PPSSPP on a mobile device. Some of these devices, especially older ones, often have very poor OpenGL ES drivers, although the situation is improving. Newer devices now have Vulkan support, which helps a lot since we can spread the rendering work across two threads. The next version of PPSSPP, 1.6, will also have multithreaded OpenGL ES rendering, helping greatly on multicore devices.</p>
 
           <h2>Why is the emulator called PPSSPP?</h2>
-          <p>Why not? The domain name ppsspp.org was available.</p>
+          <p>Why not? The domain name ppsspp.org was available, unlike the corresponding domains for many other alternatives I considered. Today I probably would have named it something different and more memorable.</p>
 
           <h2>If I buy PPSSPP Gold for Android, can I also download PPSSPP Gold for PC?</h2>
           <p>Unfortunately there is no way to get information about Android app purchases, so I can't pre-approve email addresses or something like that. But feel free to use the free PC version indefinitely.</p>
@@ -92,8 +89,13 @@ include("header.php");
           <p>To emulate advanced systems like the PSP fast, the emulator needs to translate the machine code language of the PSP to the machine code language of your PC or mobile device at runtime. This is done with a <strong>"Just-In-Time recompiler"</strong> or JIT, also known as a Dynarec. PPSSPP has JITs for x86 and ARM, 32-bit and 64-bit.</p>
           <p>For a JIT to function, an app needs to have the ability to generate machine code at runtime. This is allowed on Windows, Mac, Linux and Android, while it is completely disallowed on non-jailbroken iOS and on App Store Mac apps, and on Windows Phone 8. It's almost possible on Windows Phone 10 but the OS has a deficiency making it very unstable on ARM (missing support for FlushInstructionCache()).</p>
 
+          <h2>My app is on the PPSSPP Homebrew Store and I do not spprove!</h2>
+          <p>Shoot me an e-mail (hrydgard at gmail dot com) and I'll remove it.</p>
+
           <h2>Where can I find the privacy policy?</h2>
           <p>Here: <a href="/privacy.html">The PPSSPP privacy policy<a></p>
+
+          <p style="color:#484848">Hi Victor!</p>
 
         </div>
       </div>

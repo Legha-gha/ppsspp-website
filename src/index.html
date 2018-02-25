@@ -127,6 +127,15 @@ include("header.php");
         <div class="span12" id="news">
           <h2>News</h2>
           <a name="news"></a>
+          <h3>February 6, 2018: Back in the Play Store!</h3>
+          <p>The appeal against the suspension was successful, as expected. We're back!</p>
+          <h3>Febraury 1, 2018: News update: PPSSPP temporarily gone from Play Store, OpenGL threading success</h3>
+          <p>PPSSPP (not PPSSPP Gold, for some reason) was suspended by Google from the Play Store for unclear reasons. I am appealing the decision. In the meantime, you can download the APK and install it manually.</p>
+          <p>In other news, the new OpenGL threading code is turning out to be very fast, nearly reaching Vulkan speeds in some cases. So if games are running slow on your device, and it has more than one core - stay tuned for 1.6! It will still be a while though before the code is fully stable, but it's already showing lots of promise.</p>
+          <h3>December 5, 2017: PPSSPP 1.5.4, - more crashfixes, mostly Vulkan</h3>
+          <p>Another quick update to take care of some common crashes.</p>
+          <p><a href="downloads.html"><img alt="PPSSPP icon" src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP <?php echo $current_version; ?>!</a></p>
+					<p><img alt="PPSSPP Gold icon" src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="https://central.ppsspp.org/buygold"> Buy PPSSPP Gold <?php echo $current_version; ?>!</a>
           <h3>November 30, 2017: PPSSPP 1.5.2, - fixes for common crashes</h3>
           <p>Released a quick update to take care of some common crashes in 1.5.</p>
           <h3>November 29, 2017: PPSSPP 1.5 - Vulkan is here!</h3>
@@ -147,43 +156,6 @@ include("header.php");
             <li>Assorted bugfixes and compatibility improvements</li>
           </ul>
           <p>Note that Google Play might take a day or two to update, I'm doing a slow rollout this time to catch unexpected crashes from the new Vulkan backend etc. Some issues have been found already, fixes will be made.<p>
-          <p><a href="downloads.html"><img alt="PPSSPP icon" src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP <?php echo $current_version; ?>!</a></p>
-					<p><img alt="PPSSPP Gold icon" src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="https://central.ppsspp.org/buygold"> Buy PPSSPP Gold <?php echo $current_version; ?>!</a>
-
-          <h3>May 27, 2017: PPSSPP 1.4.2 - more fixes</h3>
-          <p>No major news, but there's been fixes:</p>
-          <ul>
-            <li>Fix bug causing several games to crash on ARM64, including Metal Gear Solid: Peace Walker</li>
-            <li>Software rendering crashfix</li>
-            <li>Fixes for homebrew: Timing, MEMSIZE</li>
-          </ul>
-
-          <h3>May 23, 2017: PPSSPP 1.4.1 - bugfix release</h3>
-          <p>No major news, but there's been fixes:</p>
-          <ul>
-            <li>Fixes for some common hangs and crashes</li>
-            <li>Vertex decoder optimizations</li>
-            <li>Corrections to mipmap bias and selection function</li>
-            <li>Major improvements and fixes to software renderer, including mipmap support</li>
-            <li>UI background image support</li>
-            <li>Fix crash in framebuffer blits affecting Persona 3</li>
-          </ul>
-          <h3>April 1, 2017: PPSSPP 1.4 Android bug fixed</h3>
-          <p>In the initial release for Android, the font files were missing, causing problem with a few games. Please re-download if you got it in the first hours. Sorry for the trouble.</p>
-          <h3>March 31, 2017: PPSSPP 1.4 has arrived!</h3>
-          <ul>
-            <li>Support D3D11 (performs better than OpenGL or D3D9 on most hardware)
-            <li>Audio quality improvement (linear interpolation) (#8950)
-            <li>Hardware spline/bezier tesselation in OpenGL, D3D11 and Vulkan (...)
-            <li>Post-processing shaders in D3D11
-            <li>Prescale UV setting removed, now the default (improves perf) (#9176)
-            <li>High DPI display fixes
-            <li>Various fixes for UMD switching for multi-UMD games (#9245, #9256)
-            <li>New audio setting to improve compatibility with Bluetooth headsets
-            <li>Various desktop gamepad compatibility fixes
-            <li>Workaround for mipmap issue, fixing fonts in Tactics Ogre Japanese
-            <li>Assorted minor compatibility fixes, code cleanup and performance improvements
-          </ul>
 
           <h3>Older news</h3>
           <p>See <a href="/index_more.html">older news</a></p>

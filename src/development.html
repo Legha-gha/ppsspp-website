@@ -51,22 +51,23 @@ include("header.php");
           <p>The PPSSPP coding style is similar to the <a href="https://google-styleguide.googlecode.com/svn/trunk/cppguide.xml">Google C++ coding style</a>.</p>
 
           <h2>Porting PPSSPP</h2>
-          <p>You are encouraged to port PPSSPP to new platforms. Here's an incomplete list of platforms that PPSSPP could or could not be ported to (last updated July 2017):</p>
+          <p>You are encouraged to port PPSSPP to new platforms. Here's an incomplete list of platforms that PPSSPP could or could not be ported to (last updated February 2018):</p>
           <table class="table table-striped" >
             <tr><th>Platform</th><th>Done</th><th>Comments<th></th></tr>
             <tr><td>Windows</td><td><span class="label label-success">Done</span></td><td>JIT for x86 and x64</td></tr>
             <tr><td>Android</td><td><span class="label label-success">Done</span></td><td>JIT for ARM, ARM64, x86, x86-64</td></tr>
             <tr><td>Linux</td><td><span class="label label-success">Done</span></td><td>JIT for ARM, ARM64, x86, x86-64</td></tr>
             <tr><td>MacOSX</td><td><span class="label label-success">Done</span></td><td>JIT for x86 and x64. Port still pretty bad.</td></tr>
-            <tr><td>Blackberry 10</td><td><span class="label label-success">Done</span></td><td>JIT for ARM</td></tr>
-            <tr><td>Symbian</td><td><span class="label label-success">Done</span></td><td>JIT for ARM</td></tr>
-            <tr><td>Pandora</td><td><span class="label label-success">Done (unofficial)</span></td><td></td></tr>
-            <tr><td>iOS</td><td><span class="label label-success">Done (unofficial)</span></td><td>JIT (Jailbreak required)</td></tr>
+            <tr><td>iOS</td><td><span class="label label-success">Done</span></td><td>JIT works. Not allowed in Apple Store.</td></tr>
+            <tr><td>Blackberry 10</td><td><span class="label label-warning">Done (no longer maintained)</span></td><td>JIT for ARM</td></tr>
+            <tr><td>Symbian</td><td><span class="label label-warning">Done (no longer maintained)</span></td><td>JIT for ARM</td></tr>
+            <tr><td>Pandora</td><td><span class="label label-warning">Done (no longer maintained)</span></td><td></td></tr>
             <tr><td>Raspberry Pi</td><td><span class="label label-warning">Done</span></td><td>JIT working</td></tr>
-            <tr><td>Windows UWP/Xbox One/WinPhone10</td><td><span class="label label-warning">Partial</span></td><td>JIT for x86 and x64</td></tr>
-            <tr><td>Meego</td><td><span class="label label-success">Done</span></td><td>No longer supported</td></tr>
+            <tr><td>Windows UWP/Xbox One/WinPhone10</td><td><span class="label label-warning">Partial, unsupported</span></td><td>JIT for x86 and x64</td></tr>
+            <tr><td>Meego</td><td><span class="label label-warning">Done</span></td><td>Done (no longer supported)</td></tr>
             <tr><td>Windows Phone 7.x</td><td><span class="label label-important">NOT POSSIBLE</span></td><td>No native code support</td></tr>
             <tr><td>Windows Phone 8</td><td><span class="label label-important">NOT POSSIBLE</span></td><td>JIT not allowed, would be way too slow</td></tr>
+            <tr><td>Nintendo Switch</td><td><span class="label label-important">LIKELY POSSIBLE</span></td><td>We'll see.</td></tr>
             <tr><td>Xbox 360</td><td><span class="label label-warning">POSSIBLE</span></td><td>Hacked consoles only. Unlikely to happen.</td></tr>
             <tr><td>Playstation 3</td><td><span class="label label-warning">POSSIBLE</span></td><td>Hacked consoles only. Unlikely to happen.</td></tr>
             <tr><td>Wii</td><td><span class="label label-warning">NOT POSSIBLE</span></td><td>Not enough RAM.</td></tr>
