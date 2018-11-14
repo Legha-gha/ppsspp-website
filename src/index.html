@@ -44,9 +44,12 @@ include("header.php");
               <div id="my-slideshow">
                 <a href="/screenshots.html">
 									<ul class="bjqs">
-										<li><img alt="Screenshot of Monster Hunter Freedom Unite" title="Monster Hunter Freedom Unite" src="img/screens/small/monsterhunterfreedomunite.jpg"></li>
+                    <li><img alt="" title="Final Fantasy Type-0" src="img/screens/small/Final_Fantasy_Type-0_-_Drayano.jpg"></li>
+										<li><img alt="" title="Project Diva Extend" src="img/screenshots/projectdivaextend.jpg"></li>
+										<li><img alt="" title="Monster Hunter Freedom Unite" src="img/screens/small/monsterhunterfreedomunite.jpg"></li>
 										<li><img alt="" title="God of War: Ghost of Sparta" src="img/screenshots/god_of_war_gos.jpg"></li>
 										<li><img alt="" title="Little Big Planet" src="img/screens/small/littlebigplanet.jpg"></li>
+										<li><img alt="" title="Assassin's Creed - Bloodlines" src="img/screens/small/Assassins_Creed_Bloodlines_-_A_Yuanda.jpg"></li>
 										<li><img alt="" title="Ridge Racer 2" src="img/screens/small/ridgeracer2.jpg"></li>
 										<li><img alt="" title="Daxter" src="img/screens/small/daxter.jpg"></li>
 										<li><img alt="" title="Gran Turismo" src="img/screens/small/granturismo.jpg"></li>
@@ -56,7 +59,6 @@ include("header.php");
 										<li><img alt="" title="Soul Calibur" src="img/screens/small/soulcalibur.jpg"></li>
 										<li><img alt="" title="Final Fantasy: Crisis Core" src="img/screens/small/finalfantasycrisiscore.jpg"></li>
 										<li><img alt="" title="Gitaroo Man" src="img/screens/small/gitarooman.jpg"></li>
-										<li><img alt="" title="Project Diva Extend" src="img/screenshots/projectdivaextend.jpg"></li>
 										<li><img alt="" title="Megaman: Maverick Hunter X" src="img/screenshots/megaman_maverick.jpg"></li>
 										<li><img alt="" title="Virtua Tennis" src="img/screenshots/virtua_tennis.jpg"></li>
 								  </ul>
@@ -72,6 +74,7 @@ include("header.php");
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
               </div>
 <div class="fb-like" data-href="https://www.facebook.com/pages/Ppsspp/343006152466916" data-send="true" data-width="300" data-show-faces="true" data-font="tahoma" data-colorscheme="dark"></div>
+              <div><a href="https://discord.gg/5NJB6dD">Discuss on Discord</a></div>
             </div>
           </div>
         </div>
@@ -127,9 +130,32 @@ include("header.php");
         <div class="span12" id="news">
           <h2>News</h2>
           <a name="news"></a>
+          <h3>October 27, 2018: PPSSPP 1.7 - stability and bugfixes!</h3>
+          <p>PPSSPP 1.7 has a large number of compatibility and bugfixes, and if you've previously had problems with crashes or instability, hopefully you will see a big improvement.</p>
+          <p>The Android release will be rolled out slowly over the next week to catch bugs. If you want to get it early, the APK is available.</p>
+          <p><b>UPDATE: 1.7.1 includes some minor crash fixes and a savedata fix.</b></p>
+          <ul>
+            <li> Fix for insta-crash on Galaxy Note 9, some Xiaomi devices, and the new nVidia Shield (#11441)</li>
+            <li>Vertex range culling on most platforms, fixes DTM: Race Driver and similar (#11393)</li>
+            <li>Major speed boost in some Gundam and Earth Defense Force games (#10973)</li>
+            <li>Fix for issues with post processing shaders in GL 3+ (#11182)</li>
+            <li>Fixes to sound output switching on Windows (WASAPI) (#11438)</li>
+            <li>Detects DirectInput devices when running (#11461)</li>
+            <li>Simple Discord integration (#11307)</li>
+            <li>New debugging APIs (#10909)</li>
+            <li>Task switching made a lot more robust (fixes GPD XD problems) (#11447)</li>
+            <li>Texture decoding optimizations (#11350)</li>
+            <li>Tons and tons of miscellaneous bugfixes and compatibility fixes</li>
+          </ul>
+
+          <p><a href="downloads.html"><img alt="PPSSPP icon" src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP <?php echo $current_version; ?>!</a></p>
+					<p><img alt="PPSSPP Gold icon" src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="https://central.ppsspp.org/buygold"> Buy PPSSPP Gold <?php echo $current_version; ?>!</a>
+
+
           <h3>May 26, 2018: PPSSPP 1.6 - the fast one!</h3>
           <p>This time, it's all about speed. The Vulkan backend has improved as is now the default where available, while the OpenGL backend has been properly multithreaded and now runs really fast on dual-core devices. Enjoy!</p>
           <p>The Android release will be rolled out slowly over the next week to catch bugs. If you want it now now NOW then download the APK!</p>
+          <p>May 28: 1.6.1 fixes a few crashes. May 30: 1.6.2 fixes some more. June 5: 1.6.3 fixes even more.</p>
           <ul>
             <li>OpenGL backend now properly multithreaded, giving a good speed boost.
             <li>Various Vulkan performance improvements (like #10911) and memory allocation fixes.
@@ -144,8 +170,6 @@ include("header.php");
             <li>Vulkan support on Linux/SDL (#10413)
             <li>Retroarch support
           </ul>
-          <p><a href="downloads.html"><img alt="PPSSPP icon" src="img/ppsspp-icon.png" width="24" height="24"> Download PPSSPP <?php echo $current_version; ?>!</a></p>
-					<p><img alt="PPSSPP Gold icon" src="img/ppsspp-icon-gold.png" width="24" height="24"><a href="https://central.ppsspp.org/buygold"> Buy PPSSPP Gold <?php echo $current_version; ?>!</a>
 
           <h3>Older news</h3>
           <p>See <a href="/index_more.html">older news</a></p>
