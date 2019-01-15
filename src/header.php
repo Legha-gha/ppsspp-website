@@ -35,10 +35,21 @@ if ($pagelang == 'cn') {
 	<meta charset="utf-8">
 
   <title><?php echo $title; ?> - <?php echo $description; ?></title>
-	<meta name="description" content="PPSSPP is the first PSP emulator for Android (and other mobile platforms), and also runs faster than any other on Windows, Linux and MacOSX. PPSSPP is in its early stages and game compatibility is thus still somewhat spotty.">
-	<meta name="author" content="PPSSPP Team">
+	<meta name="description" content="PPSSPP is the leading PSP emulator for Android, Windows, Linux, Mac and more.">
 	<meta name="viewport" content="width=device-width">
-	<meta name="keywords" content="psp,emulator,pc,ppsspp,android,ios,iphone,ipad,blackberry,symbian">
+  <meta name="keywords" content="psp,emulator,pc,ppsspp,android,ios,iphone,ipad,blackberry,symbian">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-36039055-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 
   <style>
     div.hero-unit {
@@ -46,21 +57,7 @@ if ($pagelang == 'cn') {
 		}
 	</style>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/bjqs.css">
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36039055-1']);
-  _gaq.push(['_setDomainName', 'ppsspp.org']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+  <link rel="stylesheet" type="text/css" href="css/bjqs.css">
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>

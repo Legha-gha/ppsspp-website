@@ -3,6 +3,7 @@
 
 PAGES=\
 	./404.html \
+	./adhoc.html \
 	./at3plusdecoder.html \
 	./blog-cn.html \
 	./blog.html \

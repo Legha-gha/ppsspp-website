@@ -13,6 +13,24 @@ if (array_key_exists(0, $versions)) {
 
 include("header.php");
 ?>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
     <div class="container">
       <div class="row">
         <div class="hero-unit">
@@ -54,7 +72,7 @@ include("header.php");
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/HJJZvTmG5n4" frameborder="0" allowfullscreen></iframe> -->
               <div>
                 <br/>
-                <a href="https://twitter.com/PPSSPP_emu" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @PPSSPP_emu</a>
+                <a href="https://twitter.com/PPSSPP_emu" class="twitter-follow-button" data-show-count="false">Follow @PPSSPP_emu</a>
               </div>
                 <!--
               <div>
@@ -119,9 +137,9 @@ include("header.php");
           <h2>News</h2>
           <a name="news"></a>
           <h3>October 27, 2018: PPSSPP 1.7 - stability and bugfixes!</h3>
-          <p>PPSSPP 1.7 has a large number of compatibility and bugfixes, and if you've previously had problems with crashes or instability, hopefully you will see a big improvement.</p>
+          <p>PPSSPP 1.7.x has a large number of compatibility and bugfixes, and if you've previously had problems with crashes or instability, hopefully you will see a big improvement.</p>
           <p>The Android release will be rolled out slowly over the next week to catch bugs. If you want to get it early, the APK is available.</p>
-          <p><b>UPDATE: 1.7.1 includes some minor crash fixes and a savedata fix.</b></p>
+          <p><b>UPDATE: 1.7.1 includes some minor crash fixes and a savedata fix. 1.7.2-1.7.4 are just additional crashfixes. 1.7.5 fixes an Android issue.</b></p>
           <ul>
             <li> Fix for insta-crash on Galaxy Note 9, some Xiaomi devices, and the new nVidia Shield (#11441)</li>
             <li>Vertex range culling on most platforms, fixes DTM: Race Driver and similar (#11393)</li>
@@ -165,4 +183,6 @@ include("header.php");
       </div>
 
     </div> <!-- /container -->
+
+
 <?php include("footer.php"); ?>
