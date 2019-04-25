@@ -19,6 +19,43 @@ include("header.php");
           <h2>News</h2>
           <a name="news"></a>
 
+          <h3>October 27, 2018: PPSSPP 1.7 - stability and bugfixes!</h3>
+          <p>PPSSPP 1.7.x has a large number of compatibility and bugfixes, and if you've previously had problems with crashes or instability, hopefully you will see a big improvement.</p>
+          <p>The Android release will be rolled out slowly over the next week to catch bugs. If you want to get it early, the APK is available.</p>
+          <p><b>UPDATE: 1.7.1 includes some minor crash fixes and a savedata fix. 1.7.2-1.7.4 are just additional crashfixes. 1.7.5 fixes an Android issue.</b></p>
+          <ul>
+            <li> Fix for insta-crash on Galaxy Note 9, some Xiaomi devices, and the new nVidia Shield (#11441)</li>
+            <li>Vertex range culling on most platforms, fixes DTM: Race Driver and similar (#11393)</li>
+            <li>Major speed boost in some Gundam and Earth Defense Force games (#10973)</li>
+            <li>Fix for issues with post processing shaders in GL 3+ (#11182)</li>
+            <li>Fixes to sound output switching on Windows (WASAPI) (#11438)</li>
+            <li>Detects DirectInput devices when running (#11461)</li>
+            <li>Simple Discord integration (#11307)</li>
+            <li>New debugging APIs (#10909)</li>
+            <li>Task switching made a lot more robust (fixes GPD XD problems) (#11447)</li>
+            <li>Texture decoding optimizations (#11350)</li>
+            <li>Tons and tons of miscellaneous bugfixes and compatibility fixes</li>
+          </ul>
+
+          <h3>May 26, 2018: PPSSPP 1.6 - the fast one!</h3>
+          <p>This time, it's all about speed. The Vulkan backend has improved as is now the default where available, while the OpenGL backend has been properly multithreaded and now runs really fast on dual-core devices. Enjoy!</p>
+          <p>The Android release will be rolled out slowly over the next week to catch bugs. If you want it now now NOW then download the APK!</p>
+          <p>May 28: 1.6.1 fixes a few crashes. May 30: 1.6.2 fixes some more. June 5: 1.6.3 fixes even more.</p>
+          <ul>
+            <li>OpenGL backend now properly multithreaded, giving a good speed boost.
+            <li>Various Vulkan performance improvements (like #10911) and memory allocation fixes.
+            <li>GPU command interpreter performance improvements (#10658)
+            <li>Various fixes for app switching and widgets (#10855) on Android
+            <li>Bugfixes and some performance improvements in the ARM64 JIT compiler and IR interpreter
+            <li>Shader cache enabled for Vulkan
+            <li>Multiple iOS fixes, including JIT (#10465) and file browser (#10921).
+            <li>Improved compatibility on Mac (#10113)
+            <li>Texture replacement ID bugfix (note: some textures from 1.5.4 may become incompatible)
+            <li>Adhoc multiplayer fixes (#8975)
+            <li>Vulkan support on Linux/SDL (#10413)
+            <li>Retroarch support
+          </ul>
+
           <h3>February 6, 2018: Back in the Play Store!</h3>
           <p>The appeal against the suspension was successful, as expected. We're back!</p>
           <h3>Febraury 1, 2018: News update: PPSSPP temporarily gone from Play Store, OpenGL threading success</h3>
